@@ -5,6 +5,6 @@ module.exports = {
       '@': path.resolve(__dirname, 'src/'),
       '@COM': '@/components',
       '@HOOK': '@/hook',
-    },
+    }
   }
 }

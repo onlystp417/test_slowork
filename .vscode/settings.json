@@ -6,16 +6,15 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
   },
+  "eslint.alwaysShowStatus": true,
   "emmet.syntaxProfiles": {
-    // "vue-html": "html",
-    // "vue": "html",
+    "javascript": "jsx"
   },
-  "vetur.validation.template": false,
   "eslint.validate": [
     "javascriptreact",
     "javascript",
     "react"
   ],
-  "editor.foldingStrategy": "indentation",
+  // "editor.foldingStrategy": "indentation",
   "emmet.triggerExpansionOnTab": true
 }

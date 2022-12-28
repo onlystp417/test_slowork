@@ -2,7 +2,6 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
     node: true,
     commonjs: true
   },
@@ -39,9 +38,10 @@ module.exports = {
         arrowParens: 'avoid',
         trailingComma: 'none',
         bracketSpacing: true,
+        semi: false,
         useTabs: false,
-        jsxSingleQuote: false
+        jsxSingleQuote: false,
       }
     ]
   }
-};
+}
