@@ -8,9 +8,6 @@ function App() {
     <div className="home">
       <Header />
       <Reader />
-      <Reader />
-      <Reader />
-      <Reader />
     </div>
   );
 }
