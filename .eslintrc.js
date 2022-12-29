@@ -24,5 +24,6 @@ module.exports = {
     "prettier/prettier": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-unused-vars": "off"
   }
 }

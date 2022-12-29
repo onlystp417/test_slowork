@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:18.2.0"],\
             ["react-i18next", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:12.1.1"],\
+            ["react-pdf", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:6.2.1"],\
             ["react-scripts", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:5.0.1"],\
             ["sass", "npm:1.57.1"],\
             ["web-vitals", "npm:2.1.4"]\
@@ -6577,6 +6578,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["clsx", [\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/clsx-npm-1.2.1-77792dc182-30befca801.zip/node_modules/clsx/",\
+          "packageDependencies": [\
+            ["clsx", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["co", [\
         ["npm:4.6.0", {\
           "packageLocation": "./.yarn/cache/co-npm-4.6.0-03f2d1feb6-5210d92230.zip/node_modules/co/",\
@@ -7793,6 +7803,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["domhandler", "npm:4.3.1"],\
             ["domelementtype", "npm:2.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dommatrix", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/dommatrix-npm-1.0.3-1a95bacd36-8ac727c1a1.zip/node_modules/dommatrix/",\
+          "packageDependencies": [\
+            ["dommatrix", "npm:1.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11749,6 +11768,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["make-cancellable-promise", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/make-cancellable-promise-npm-1.1.0-b8c844e86b-e036fa6164.zip/node_modules/make-cancellable-promise/",\
+          "packageDependencies": [\
+            ["make-cancellable-promise", "npm:1.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["make-dir", [\
         ["npm:3.1.0", {\
           "packageLocation": "./.yarn/cache/make-dir-npm-3.1.0-d1d7505142-484200020a.zip/node_modules/make-dir/",\
@@ -11764,6 +11792,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/make-error-npm-1.3.6-ccb85d9458-b86e5e0e25.zip/node_modules/make-error/",\
           "packageDependencies": [\
             ["make-error", "npm:1.3.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["make-event-props", [\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/make-event-props-npm-1.3.0-e3f0244f48-92b8845f63.zip/node_modules/make-event-props/",\
+          "packageDependencies": [\
+            ["make-event-props", "npm:1.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11843,6 +11880,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/merge-descriptors-npm-1.0.1-615287aaa8-5abc259d2a.zip/node_modules/merge-descriptors/",\
           "packageDependencies": [\
             ["merge-descriptors", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["merge-refs", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/merge-refs-npm-1.0.0-0411827df1-3b4ea1a178.zip/node_modules/merge-refs/",\
+          "packageDependencies": [\
+            ["merge-refs", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12143,6 +12189,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:18.2.0"],\
             ["react-i18next", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:12.1.1"],\
+            ["react-pdf", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:6.2.1"],\
             ["react-scripts", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:5.0.1"],\
             ["sass", "npm:1.57.1"],\
             ["web-vitals", "npm:2.1.4"]\
@@ -12741,6 +12788,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/path-type-npm-4.0.0-10d47fc86a-5b1e2daa24.zip/node_modules/path-type/",\
           "packageDependencies": [\
             ["path-type", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["pdfjs-dist", [\
+        ["npm:2.16.105", {\
+          "packageLocation": "./.yarn/cache/pdfjs-dist-npm-2.16.105-a5756ba69d-16ad2fa0ff.zip/node_modules/pdfjs-dist/",\
+          "packageDependencies": [\
+            ["pdfjs-dist", "npm:2.16.105"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f55fc1f731e82bac637bd82d7a54e93174000bdc2dba3ba5fa6d9b23faa9791fa05d91be81d9fce658b2718a4b79965da1d5c719bd4eaf5f8fd083f8ad689a96#npm:2.16.105", {\
+          "packageLocation": "./.yarn/__virtual__/pdfjs-dist-virtual-6146ed7d5a/0/cache/pdfjs-dist-npm-2.16.105-a5756ba69d-16ad2fa0ff.zip/node_modules/pdfjs-dist/",\
+          "packageDependencies": [\
+            ["pdfjs-dist", "virtual:f55fc1f731e82bac637bd82d7a54e93174000bdc2dba3ba5fa6d9b23faa9791fa05d91be81d9fce658b2718a4b79965da1d5c719bd4eaf5f8fd083f8ad689a96#npm:2.16.105"],\
+            ["@types/worker-loader", null],\
+            ["dommatrix", "npm:1.0.3"],\
+            ["web-streams-polyfill", "npm:3.2.1"],\
+            ["worker-loader", null]\
+          ],\
+          "packagePeers": [\
+            "@types/worker-loader",\
+            "worker-loader"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -14947,6 +15018,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-pdf", [\
+        ["npm:6.2.1", {\
+          "packageLocation": "./.yarn/cache/react-pdf-npm-6.2.1-2634f48e38-eba9b904c0.zip/node_modules/react-pdf/",\
+          "packageDependencies": [\
+            ["react-pdf", "npm:6.2.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:6.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-pdf-virtual-f55fc1f731/0/cache/react-pdf-npm-6.2.1-2634f48e38-eba9b904c0.zip/node_modules/react-pdf/",\
+          "packageDependencies": [\
+            ["react-pdf", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:6.2.1"],\
+            ["@babel/runtime", "npm:7.20.7"],\
+            ["@types/file-loader", null],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["clsx", "npm:1.2.1"],\
+            ["file-loader", null],\
+            ["make-cancellable-promise", "npm:1.1.0"],\
+            ["make-event-props", "npm:1.3.0"],\
+            ["merge-refs", "npm:1.0.0"],\
+            ["pdfjs-dist", "virtual:f55fc1f731e82bac637bd82d7a54e93174000bdc2dba3ba5fa6d9b23faa9791fa05d91be81d9fce658b2718a4b79965da1d5c719bd4eaf5f8fd083f8ad689a96#npm:2.16.105"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:80ad70bbdea78f152e74da0ed521b5cdb4fb967632524d154689ab67c4c12b3fdca790ba3babe0037689b2b90c2a2569fa310ac4f7df3a3f0e300b8970a73830#npm:18.2.0"],\
+            ["tiny-invariant", "npm:1.3.1"],\
+            ["tiny-warning", "npm:1.0.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/file-loader",\
+            "@types/react-dom",\
+            "@types/react",\
+            "file-loader",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-refresh", [\
         ["npm:0.11.0", {\
           "packageLocation": "./.yarn/cache/react-refresh-npm-0.11.0-c0a4e59e76-112178a05b.zip/node_modules/react-refresh/",\
@@ -16556,6 +16666,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["tiny-invariant", [\
+        ["npm:1.3.1", {\
+          "packageLocation": "./.yarn/cache/tiny-invariant-npm-1.3.1-a8ca214e49-872dbd1ff2.zip/node_modules/tiny-invariant/",\
+          "packageDependencies": [\
+            ["tiny-invariant", "npm:1.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tiny-warning", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/tiny-warning-npm-1.0.3-750b7a07c4-da62c4acac.zip/node_modules/tiny-warning/",\
+          "packageDependencies": [\
+            ["tiny-warning", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["tmpl", [\
         ["npm:1.0.5", {\
           "packageLocation": "./.yarn/cache/tmpl-npm-1.0.5-d399ba37e2-cd922d9b85.zip/node_modules/tmpl/",\
@@ -17105,6 +17233,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["wbuf", "npm:1.7.3"],\
             ["minimalistic-assert", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["web-streams-polyfill", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/web-streams-polyfill-npm-3.2.1-835bd3857e-b119c78574.zip/node_modules/web-streams-polyfill/",\
+          "packageDependencies": [\
+            ["web-streams-polyfill", "npm:3.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
