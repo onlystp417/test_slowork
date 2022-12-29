@@ -14,7 +14,7 @@ i18n
       en: { translation: en },
       zhTW: { translation: zhTW }
     },
-    fallbackLng: 'zhTW',
+    fallbackLng: 'en',
     debug: true,
 
     // have a common namespace used around the full app

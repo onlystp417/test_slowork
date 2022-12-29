@@ -24,39 +24,36 @@ function App() {
           <nav className="header__nav">
             <Close className="nav-close pointer" onClick={() => menuSwitch.current.click()} />
             <div className="links">
-              <div
-                className={`link ${link === 'about' ? 'active' : ''}`}
-                onClick={() => setLink('about')}
-              >
-                {t('header.about')}
-              </div>
-              <div
-                className={`link ${link === 'read' ? 'active' : ''}`}
-                onClick={() => setLink('read')}
-              >
-                {t('header.read')}
-              </div>
-              <div
-                className={`link ${link === 'campaigns' ? 'active' : ''}`}
-                onClick={() => setLink('campaigns')}
-              >
-                {t('header.campaigns')}
-              </div>
-              <div
-                className={`link ${link === 'buy' ? 'active' : ''}`}
-                onClick={() => setLink('buy')}
-              >
-                {t('header.buy')}
-              </div>
+              {menuDOM()}
               <button className="btn buy">
                 <Cart className="pointer" />
-                <span>購買本書</span>
+                <span>{t('header.buy')}</span>
               </button>
               <div className="langs">
-                <button className="btn">中</button>
-                <button className="btn">EN</button>
-                <button className="btn">မြန်မာ</button>
-                <button className="btn">ไทย</button>
+                <button
+                  className={`btn ${i18n.language === 'zhTW' ? 'active' : ''}`}
+                  onClick={() => i18n.changeLanguage('zhTW')}
+                >
+                  中
+                </button>
+                <button
+                  className={`btn ${i18n.language === 'en' ? 'active' : ''}`}
+                  onClick={() => i18n.changeLanguage('en')}
+                >
+                  EN
+                </button>
+                <button
+                  className={`btn ${i18n.language === 'bu' ? 'active' : ''}`}
+                  onClick={() => i18n.changeLanguage('bu')}
+                >
+                  မြန်မာ
+                </button>
+                <button
+                  className={`btn ${i18n.language === 'th' ? 'active' : ''}`}
+                  onClick={() => i18n.changeLanguage('th')}
+                >
+                  ไทย
+                </button>
               </div>
             </div>
           </nav>
@@ -64,6 +61,53 @@ function App() {
       </div>
     </header>
   );
+
+  function menuDOM() {
+    if (i18n.language === 'zhTW') {
+      return (
+        <>
+          <div
+            className={`link ${link === 'about' ? 'active' : ''}`}
+            onClick={() => setLink('about')}
+          >
+            {t('header.about')}
+          </div>
+          <div
+            className={`link ${link === 'read' ? 'active' : ''}`}
+            onClick={() => setLink('read')}
+          >
+            {t('header.read')}
+          </div>
+          <div className={`link ${link === 'buy' ? 'active' : ''}`} onClick={() => setLink('buy')}>
+            Podcast
+          </div>
+          <div
+            className={`link ${link === 'campaigns' ? 'active' : ''}`}
+            onClick={() => setLink('campaigns')}
+          >
+            {t('header.campaigns')}
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div
+            className={`link ${link === 'about' ? 'active' : ''}`}
+            onClick={() => setLink('about')}
+          >
+            {t('header.about')}
+          </div>
+          <div
+            className={`link ${link === 'read' ? 'active' : ''}`}
+            onClick={() => setLink('read')}
+          >
+            {t('header.read')}
+          </div>
+        </>
+      );
+    }
+  }
 }
 
 export default App;
