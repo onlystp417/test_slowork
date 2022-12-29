@@ -1,47 +1,28 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-    commonjs: true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest/globals": true
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'prettier',
-    'plugin:prettier/recommended'
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
   ],
-  overrides: [
-    {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
-      env: {
-        jest: true
-      }
-    }
+  "overrides": [
   ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  plugins: ['react', 'prettier'],
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'react/no-unused-prop-types': 0,
-    'react/no-unescaped-entities': 0,
-    'react/prop-types': 0,
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        printWidth: 100,
-        arrowParens: 'avoid',
-        trailingComma: 'none',
-        bracketSpacing: true,
-        semi: false,
-        useTabs: false,
-        jsxSingleQuote: false,
-      }
-    ]
+  "plugins": [
+    "react",
+    "prettier",
+    "jest"
+  ],
+  "rules": {
+    "prettier/prettier": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   }
 }
