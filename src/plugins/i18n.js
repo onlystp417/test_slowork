@@ -8,18 +8,19 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: 'zhTW',
     // we init with resources
     resources: {
-      en,
-      zhTW
+      en: { translation: en },
+      zhTW: { translation: zhTW }
     },
     fallbackLng: 'zhTW',
     debug: true,
 
     // have a common namespace used around the full app
-    defaultNS: 'index',
+    // defaultNS: 'index',
 
-    keySeparator: false, // we use content as keys
+    // keySeparator: false, // we use content as keys
 
     interpolation: {
       escapeValue: false

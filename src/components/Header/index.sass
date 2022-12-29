@@ -1,0 +1,118 @@
+.header
+  position: sticky
+  top: 0px
+  z-index: 9
+  background-color: #000
+  padding: 5px 10px
+  .menu
+    position: absolute
+    right: 10px
+    top: 15px
+  #menu
+    display: none
+  @media screen and (min-width: 768px)
+    padding: 0
+    padding-left: 16px
+    .logo
+      margin: 16px 0
+    .menu
+      display: none
+
+  &__operator
+    .nav-layer
+      display: none
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: #00000044
+    z-index: 1
+    .nav-close
+      margin-top: 13px
+      margin-right: 13px
+    @media screen and (min-width: 768px)
+      flex-grow: 1
+      margin-left: 18px
+      .nav-close
+        display: none
+
+  &__nav
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end
+    padding: 13px 13px 30px 13px
+    background-color: #000
+    position: fixed
+    color: #505050
+    width: 55vw
+    top: 0
+    bottom: 0
+    right: 0
+    z-index: 2
+    transform: translateX(100%)
+    transition: transform .3s
+    .link
+      line-height: 2.5rem
+      text-align: right
+      cursor: pointer
+      &:hover, &.active
+        color: #F6DACF
+    .btn:not(.buy)
+      color: #505050
+    .btn.buy
+      padding: 22px 34px
+      background-color: #F6DACF
+      margin-top: 50px
+      margin-bottom: 50px
+      font-size: 18px
+      font-weight: bold
+      svg
+        margin-right: 5px
+    .langs
+      text-align: right
+      .btn
+        font-size: 16px
+        padding: 0 4px
+      .btn:hover, .btn.active
+        color: #F6DACF
+    @media screen and (min-width: 768px)
+      flex-grow: 1
+      width: auto
+      position: static
+      transform: translateX(0)
+      padding: 0
+      flex-direction: row
+      .links
+        flex-grow: 1
+        display: flex
+        align-items: center
+        justify-content: flex-end
+      .link
+        margin: 0 3px
+        padding: 1px
+      .btn.buy
+        order: 12
+        display: flex
+        align-items: center
+        margin: 0
+        font-size: 13px
+        padding: 28px 15px
+      .langs
+        margin: 0 17px
+        font-size: 16px
+    @media screen and (min-width: 1280px)
+      .link
+        margin: 0 4%
+      .btn.buy
+        font-size: 1rem
+        padding: 28px 22px
+      .langs
+        margin-left: 10%
+        .btn
+          padding: 0 10px
+  #menu:checked ~ .header__operator > .header__nav
+    transform: translateX(2px)
+  #menu:checked ~ .header__operator > .nav-layer
+    display: block

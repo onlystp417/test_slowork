@@ -4,7 +4,7 @@
     "source.fixAll.eslint": true,
   },
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
+    "javascript": "javascriptreact"
   },
   "eslint.alwaysShowStatus": true,
   "emmet.syntaxProfiles": {

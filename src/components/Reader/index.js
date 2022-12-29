@@ -7,7 +7,7 @@ import './index.sass';
 import zhComic from '@/assets/comics/zhTW.pdf';
 import enComic from '@/assets/comics/en.pdf';
 
-function App() {
+function Reader() {
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
   }, []);
@@ -19,8 +19,8 @@ function App() {
   }
 
   return (
-    <div className='reader'>
-      <Document file={zhComic} width='300px' onLoadSuccess={onDocumentLoadSuccess}>
+    <div className="reader">
+      <Document file={zhComic} width="300px" onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
       </Document>
       {/* <button onClick={setPageNumber(1)}>&#171;</button>
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Reader;

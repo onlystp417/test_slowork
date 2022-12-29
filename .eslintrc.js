@@ -21,9 +21,20 @@ module.exports = {
     "jest"
   ],
   "rules": {
-    "prettier/prettier": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    'prettier/prettier': [
+      'warn',
+      {
+        singleQuote: true,
+        printWidth: 100,
+        arrowParens: 'avoid',
+        trailingComma: 'none',
+        bracketSpacing: true,
+        useTabs: false,
+        jsxSingleQuote: false
+      }
+    ]
   }
 }
