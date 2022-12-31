@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: 'zhTW',
+    lng: localStorage.getItem('lang') ? localStorage.getItem('lang') : 'zhTW',
     // we init with resources
     resources: {
       en: { translation: en },

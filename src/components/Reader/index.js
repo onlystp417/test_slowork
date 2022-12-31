@@ -7,39 +7,136 @@ import './index.sass';
 // resource
 import zhComic from '@/assets/comics/zhTW.pdf';
 import enComic from '@/assets/comics/en.pdf';
+// images
+import { ReactComponent as FirstPage } from '@/assets/images/angle-double-left.svg';
+import { ReactComponent as Prev } from '@/assets/images/angle-left.svg';
+import { ReactComponent as Next } from '@/assets/images/angle-right.svg';
+import { ReactComponent as LastPage } from '@/assets/images/angle-double-right.svg';
+import { ReactComponent as Finger } from '@/assets/images/cursor-finger.svg';
+import Comic from '@/assets/images/book-cover.png';
 
 const comics = {
   zhTW: zhComic,
   en: enComic
 };
 
+const CHAPTER_PAGE_NUMBER = [12, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99]; // 後四章為中文版 -2 頁數
+
 function Reader() {
-  const { i18n } = useTranslation();
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
   }, []);
-  // const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(5);
+  const { t } = useTranslation();
+  const [numPages, setNumPages] = useState(null); // 總頁數
+  const [pageNumber, setPageNumber] = useState(1); // 頁
+  const [chapter, setChapter] = useState(null);
+  const buyDes = t('buy.des', { returnObjects: true });
+  const chapters = t('reading', { returnObjects: true });
 
-  // function onDocumentLoadSuccess({ numPages }) {
-  //   setNumPages(numPages);
-  // }
+  function onDocumentLoadSuccess({ numPages }) {
+    const lang = localStorage.getItem('lang');
+    if (lang === 'zhTW') {
+      setNumPages(76);
+    } else {
+      setNumPages(numPages + 2);
+    }
+    console.log('numPages', numPages);
+  }
+
+  function onChangeChapter(index) {
+    if (localStorage.getItem('lang') === 'zhTW' && index > 6) return;
+    setChapter(index);
+    setPageNumber(CHAPTER_PAGE_NUMBER[index]);
+  }
+
+  function limitPage() {
+    const lang = localStorage.getItem('lang');
+    if (lang === 'zhTW') {
+      return chapter > 6 ? 1 : pageNumber;
+    } else {
+      return pageNumber > 5 ? pageNumber - 2 : pageNumber;
+    }
+  }
+
+  function lastPage() {
+    const lang = localStorage.getItem('lang');
+    if (lang === 'zhTW') {
+      return 76;
+    } else {
+      return 114;
+    }
+  }
 
   return (
     <div className="reader">
-      {/* <Document file={zhComic} onLoadSuccess={onDocumentLoadSuccess}> */}
-      <Document file={comics[i18n.language]}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <div className="reader__operator">
-        <button onClick={() => setPageNumber(1)}>&#171;</button>
-        <button onClick={() => setPageNumber(pageNumber - 1)}>&#8249;</button>
-        <button onClick={() => setPageNumber(pageNumber + 1)}>&#8250;</button>
-        <button onClick={() => setPageNumber(114)}>&#187;</button>
-        <p>pageNumber</p>
-      </div>
+      <section className="reader__chapter">
+        <h2 className="reader__title">{t('readingTitle')}</h2>
+        <div className="chapter">
+          {chapters.map((text, index) => (
+            <button
+              key={index}
+              className={`${chapter === index ? 'active' : ''}`}
+              onClick={() => onChangeChapter(index)}
+              disabled={text.includes('請支持紙本')}
+            >
+              {text}
+            </button>
+          ))}
+        </div>
+        <div className="desktop">{readerBuyDOM()}</div>
+      </section>
+      <section className="reader__main">
+        <Document
+          className="reader__view"
+          file={comics[localStorage.getItem('lang')]}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page pageNumber={limitPage()} />
+        </Document>
+        <div className="reader__operator">
+          <button onClick={() => setPageNumber(1)} disabled={limitPage(pageNumber) === 1}>
+            <FirstPage />
+          </button>
+          <button
+            onClick={() => setPageNumber(pageNumber - 1)}
+            disabled={limitPage(pageNumber) === 1}
+          >
+            <Prev />
+          </button>
+          <p>{pageNumber}</p>
+          <button
+            onClick={() => setPageNumber(pageNumber + 1)}
+            disabled={pageNumber === lastPage()}
+          >
+            <Next />
+          </button>
+          <button onClick={() => setPageNumber(numPages)} disabled={pageNumber === lastPage()}>
+            <LastPage />
+          </button>
+        </div>
+      </section>
+      <div className="mobile-tablet">{readerBuyDOM()}</div>
     </div>
   );
+
+  function readerBuyDOM() {
+    return (
+      <section className="reader__buy">
+        <img src={Comic} alt={t('header.title')} />
+        <div>
+          <div className="des">
+            {buyDes.map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
+          <button>
+            <Finger />
+            <span>{t('buy.btn')}</span>
+          </button>
+        </div>
+      </section>
+    );
+  }
 }
 
 export default Reader;

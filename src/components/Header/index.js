@@ -11,6 +11,13 @@ function App() {
   const { t, i18n } = useTranslation();
   const menuSwitch = useRef(null);
   const [link, setLink] = useState('about');
+
+  async function setLang(lang) {
+    localStorage.setItem('lang', lang);
+    const locale = localStorage.getItem('lang');
+    i18n.changeLanguage(locale);
+  }
+
   return (
     <header className="header">
       <div className="justify-between">
@@ -32,25 +39,25 @@ function App() {
               <div className="langs">
                 <button
                   className={`btn ${i18n.language === 'zhTW' ? 'active' : ''}`}
-                  onClick={() => i18n.changeLanguage('zhTW')}
+                  onClick={() => setLang('zhTW')}
                 >
                   中
                 </button>
                 <button
                   className={`btn ${i18n.language === 'en' ? 'active' : ''}`}
-                  onClick={() => i18n.changeLanguage('en')}
+                  onClick={() => setLang('en')}
                 >
                   EN
                 </button>
                 <button
                   className={`btn ${i18n.language === 'bu' ? 'active' : ''}`}
-                  onClick={() => i18n.changeLanguage('bu')}
+                  onClick={() => setLang('bu')}
                 >
                   မြန်မာ
                 </button>
                 <button
                   className={`btn ${i18n.language === 'th' ? 'active' : ''}`}
-                  onClick={() => i18n.changeLanguage('th')}
+                  onClick={() => setLang('th')}
                 >
                   ไทย
                 </button>

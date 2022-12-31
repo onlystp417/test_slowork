@@ -35,6 +35,7 @@ export default {
       ]
     }
   },
+  readingTitle: 'Read《 Myanmar, the last stand 》',
   reading: [
     '#HistoryRepeating',
     '#ATasteOfFreedom',

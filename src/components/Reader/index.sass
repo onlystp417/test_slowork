@@ -1,4 +1,114 @@
 .reader
+  padding: 30px 10px 100px
+  background: url(../../assets/images/reading-bg1-mobile.png) no-repeat top center / 100%, url(../../assets/images/reading-bg2-mobile.png) no-repeat bottom center / 100%
+  background-color: #000
   canvas, .annotationLayer
     width: 100% !important
     height: auto !important
+  @media screen and (min-width: 768px)
+    background: url(../../assets/images/reading-bg1-tablet.png) no-repeat top center / 100%, url(../../assets/images/reading-bg2-tablet.png) no-repeat bottom center / 100%
+    padding: 70px 30px
+  @media screen and (min-width: 1280px)
+    display: flex
+    justify-content: space-between
+    padding: 70px 130px 82px
+    background: url(../../assets/images/reading-bg.png) no-repeat top center / cover
+  
+  &__title
+    width: fit-content
+    padding: 0 0 15px 20px
+    margin-bottom: 10px
+    background: url(../../assets/images/brush.png) no-repeat left bottom / 100%
+    color: #fff
+    @media screen and (min-width: 768px)
+      padding: 0 0 18px 40px
+      font-size: 35px
+      background-position: left bottom
+    @media screen and (min-width: 1280px)
+      font-size: 31px
+      padding: 0 0 20px 35px
+      margin-bottom: 50px
+
+  &__main
+    margin-bottom: 40px
+    @media screen and (min-width: 768px)
+      margin-bottom: 75px
+    @media screen and (min-width: 1280px)
+      margin-bottom: 0
+
+  &__view
+    margin-bottom: 20px
+
+  &__operator
+    display: flex
+    p
+      flex-grow: 1
+      text-align: center
+      color: #FFF
+    button
+      flex: 0 0 50px
+      border: none
+      background-color: inherit
+      &[disabled]
+        opacity: .4
+        cursor: not-allowed
+
+  &__chapter
+    margin-bottom: 30px
+    padding: 0 30px
+    button
+      display: block
+      color: #9FAABC
+      width: fit-content
+      margin-bottom: 15px
+      font-size: 18px
+      cursor: pointer
+      text-align: left
+      &.active
+        color: #FFF
+      &[disabled]
+        opacity: .4
+        cursor: not-allowed
+    @media screen and (min-width: 768px)
+      .chapter
+        column-count: 3
+    @media screen and (min-width: 1280px)
+      position: relative
+      flex: 0 0 48%
+      .chapter
+        column-count: 2
+        margin-bottom: 80px
+
+  &__buy
+    padding: 0 15px
+    text-align: center
+    color: #FFF
+    img
+      margin-bottom: 30px
+    .des
+      margin-bottom: 30px
+      font-size: 13px
+      p + p
+        margin-top: 20px
+    button
+      min-width: 160px
+      padding: 12px 30px
+      background-color: #F6DACF
+      font-weight: 700
+      font-size: 18px
+      color: #000
+      svg, span
+        vertical-align: middle
+      svg
+        margin-right: 3px
+    @media screen and (min-width: 768px)
+      display: flex
+      align-items: flex-end
+      text-align: left
+      img
+        margin-bottom: 0
+        margin-right: 45px
+    @media screen and (min-width: 1280px)
+      position: absolute
+      bottom: 0
+      padding: 0
