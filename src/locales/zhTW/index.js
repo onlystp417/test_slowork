@@ -58,7 +58,7 @@ export default {
     ]
   },
   podcast: {
-    title: '收聽PODCAST',
+    title: '收聽 PODCAST',
     list: [
       '01/16 反抗進行式！緬甸，最後一搏 ft. 緬甸人權家 懷恩寧 Wai Hnin',
       '02/01 在異鄉聲援故鄉  ft. 台灣聲援緬甸聯盟 愛華、Generation Now Asia 亮亮',
