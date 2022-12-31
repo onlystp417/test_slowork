@@ -16,14 +16,14 @@ export default {
   ],
   folks: {
     script: {
-      name: '斐德希克．德波米（腳本）',
+      name: '腳本 | 斐德希克．德波米',
       des: [
         '1975年出生，成長於巴黎。2006年起參與Info Birmanie、Euro Burma Network等支持、促進緬甸民主化的機構。他出版了十多本關於緬甸局勢的書籍和漫畫，並在媒體上發表相關文章，也曾針對盧旺達圖西人的種族滅絕問題發表著作。',
         "漫畫作品有《Sur le fil : dix ans d'engagement pour la Birmanie》、《Birmanie, fragments d'une réalité》、《Full stop : le génocide des Tutsi du Rwanda》等。"
       ]
     },
-    mangaka: {
-      name: '柳廣成（漫畫）',
+    comic: {
+      name: '漫畫 | 柳廣成',
       des: [
         '香港創作者。童年成長於日本京都，深受當地漫畫文化影響，返回香港定居後修讀於香港中文大學藝術系。出版及連載短篇漫畫十餘部，並在香港反送中運動時大量以漫畫發聲。習慣以鉛筆作畫，個人風格明確，藉由筆觸強調氛圍，探索以漫畫作為表達媒介時的可能性，並嘗試解構重組「漫畫」。看似樸實的筆觸裡，實則有強烈的情緒。',
         '漫畫作品有《被消失的香港》、《報導者事件簿001-留學黑工》、《北港香爐人人插》'

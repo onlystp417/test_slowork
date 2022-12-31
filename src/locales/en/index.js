@@ -15,14 +15,14 @@ export default {
   ],
   folks: {
     script: {
-      name: 'Frédéric Debomy（Script）',
+      name: 'Script | Frédéric Debomy',
       des: [
-        'orn in 1975 and grew up in Paris. Since 2006,  he has joined organizations such as Info Birmanie and the Euro Burma Network in promoting and supporting the democratization process in Myanmar. Has published over a dozen books and graphic novels about the situation in Myanmar as well as related articles in the media, and has also published book on the genocide of the Tutsi people in Rwanda.',
+        'Born in 1975 and grew up in Paris. Since 2006,  he has joined organizations such as Info Birmanie and the Euro Burma Network in promoting and supporting the democratization process in Myanmar. Has published over a dozen books and graphic novels about the situation in Myanmar as well as related articles in the media, and has also published book on the genocide of the Tutsi people in Rwanda.',
         "Published books: Sur le fil : dix ans d'engagement pour la Birmanie, Birmanie, fragments d'une réalité, Full stop : le génocide des Tutsi du Rwanda etc."
       ]
     },
     comic: {
-      name: 'Lau Kwong-Shing（Comic）',
+      name: 'Comic | Lau Kwong-Shing',
       des: [
         'Hong Kong-born creator who grew up in Kyoto, Japan, and was deeply influenced by the local manga culture there. After returning to Hong Kong to settle down, he studied at the Department of Fine Arts at the Chinese University of Hong Kong. Has published and serialized more than ten short graphic novels, and used his art to speak out during the anti-extradition movement in Hong Kong. Is accustomed to drawing with pencils, with a clear personal style and an emphasis on atmosphere through the use of pencil strokes.',
         'Published books: "The incense burner of Lust", "The Fallen City : Hong Kong", "The reporter File 001", "Cube Escape: Paradox", "Fantaisie ordinaire" etc.'

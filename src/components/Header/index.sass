@@ -12,6 +12,14 @@
     top: 15px
   #menu
     display: none
+  // #menu:not(:checked) ~ .header__operator > .header__nav
+  //   width: 0
+  //   transform: translateX(100%)
+  #menu:checked ~ .header__operator > .header__nav
+    width: 55vw
+    transform: translateX(0)
+  #menu:checked ~ .header__operator > .nav-layer
+    display: block
   @media screen and (min-width: 768px)
     padding: 0
     // padding-left: 16px
@@ -122,11 +130,3 @@
         margin-left: 10%
         .btn
           padding: 0 10px
-  #menu:checked ~ .header__operator > .header__nav
-    width: 55vw
-    transform: translateX(0)
-  #menu:not(:checked) ~ .header__operator > .header__nav
-    width: 55vw
-    transform: translateX(100%)
-  #menu:checked ~ .header__operator > .nav-layer
-    display: block
