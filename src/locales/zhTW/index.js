@@ -141,18 +141,9 @@ export default {
     ]
   },
   footer: {
-    organizer: {
-      title: '製作單位',
-      value: '慢工文化事業有限公司'
-    },
-    support: {
-      title: '創作支持',
-      value: '文化部、台灣文化基金會'
-    },
-    thanks_list: {
-      title: '特別感謝',
-      value: 'SEA plateaus'
-    },
-    contact: '合作、採訪、進書、版權洽詢'
+    organizer: '製作單位｜慢工文化事業有限公司',
+    support: '創作支持｜文化部、台灣文化基金會',
+    thanks_list: '特別感謝｜SEA Plateaus',
+    contact: '合作、採訪、進書、版權洽詢：'
   }
 };
