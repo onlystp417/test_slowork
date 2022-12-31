@@ -1,8 +1,8 @@
 import React from 'react';
 // componsnts
-import Reader from '@/components/Reader';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
+import Reader from '@/components/Reader';
 
 function App() {
   return (

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import BookTitle from '@/assets/images/book-title.png'
-import BookTitleEn from '@/assets/images/book-title-en.png'
-import SloworkLogo from '@/assets/images/slowork-logo-black.png'
+import BookTitle from '@/assets/images/book-title.png';
+import BookTitleEn from '@/assets/images/book-title-en.png';
+import SloworkLogo from '@/assets/images/slowork-logo-black.png';
 
-import './index.sass'
+import './index.sass';
 function Banner() {
   const { t } = useTranslation();
   const mainText = t('main', { returnObjects: true });

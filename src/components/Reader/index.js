@@ -10,11 +10,11 @@ import enComic from '@/assets/comics/en.pdf';
 
 const comics = {
   zhTW: zhComic,
-  en: enComic,
-}
+  en: enComic
+};
 
 function Reader() {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
   }, []);
@@ -36,9 +36,7 @@ function Reader() {
         <button onClick={() => setPageNumber(pageNumber - 1)}>&#8249;</button>
         <button onClick={() => setPageNumber(pageNumber + 1)}>&#8250;</button>
         <button onClick={() => setPageNumber(114)}>&#187;</button>
-        <p>
-          pageNumber
-        </p>
+        <p>pageNumber</p>
       </div>
     </div>
   );
