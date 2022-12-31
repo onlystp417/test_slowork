@@ -1,0 +1,81 @@
+.campaign
+  background-color: #FFF
+  color: #505050
+  padding: 30px 0
+  img
+    width: 100%
+  @media screen and (min-width: 768px)
+    padding: 60px 0 30px
+
+  &__title
+    width: fit-content
+    padding: 0 0 8px 10px
+    margin-bottom: 36px
+    margin-left: 10px
+    background: url(../../assets/images/brush-pink.png) no-repeat left bottom / 100%
+    font-size: 25px
+    font-weight: bold
+    @media screen and (min-width: 768px)
+      font-size: 35px
+      margin-left: 55px
+      padding: 0 0 13px 10px
+
+  &__list
+    padding: 0 15px
+    .des
+      white-space: pre-line
+    @media screen and (min-width: 768px)
+      padding: 0 70px
+    @media screen and (min-width: 1280px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+  &__item
+    margin-bottom: 20px
+    @media screen and (min-width: 1280px)
+      flex: 0 0 49%
+
+  &__header
+    align-items: flex-start
+    font-size: 18px
+    text-decoration: underline
+    svg
+      flex: 0 0 24px
+      transform: translateY(5px)
+    &:has(input:checked)
+      color: #F6DACF
+    @media screen and (min-width: 1280px)
+      font-size: 20px
+
+  &__content
+    background-color: #F6DACF
+    padding: 0 20px
+    font-size: 13px
+    margin-top: 10px
+    .info, .des
+      span
+        font-weight: bold
+    .info
+      display: flex
+      flex-wrap: wrap
+      border-bottom: 1px solid #505050
+      margin-top: 10px
+      p
+        flex: 0 0 100%
+        margin-bottom: 10px
+      p:first-child
+    .des
+      margin-top: 10px
+      margin-bottom: 10px
+    @media screen and (min-width: 768px)
+      .info
+        p
+          flex: 0 0 50%
+
+  &__img
+    margin-top: -20px
+    text-align: center
+    img
+      width: 100%
+      max-width: 900px

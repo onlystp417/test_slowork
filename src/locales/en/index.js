@@ -55,20 +55,20 @@ export default {
       'To support this project, please purchase bilingual (Chinese and English) paper copies of our books, and support global delivery to help spread our literature far and wide.',
       'For copies purchased directly from Slowork Publishing before February 28 2023, 10% of the proceeds will be donated to related organizations, such as Taiwan Alliance for Myanmar.'
     ]
+  },
+  footer: {
+    organizer: {
+      title: '製作單位',
+      value: '慢工文化事業有限公司'
+    },
+    support: {
+      title: '創作支持',
+      value: '文化部、台灣文化基金會'
+    },
+    thanks_list: {
+      title: '特別感謝',
+      value: 'SEA plateaus'
+    },
+    contact: '合作、採訪、進書、版權洽詢'
   }
-  // footer: {
-  //   organizer: {
-  //     title: '製作單位',
-  //     value: '慢工文化事業有限公司'
-  //   },
-  //   support: {
-  //     title: '創作支持',
-  //     value: '文化部、台灣文化基金會'
-  //   },
-  //   thanks_list: {
-  //     title: '特別感謝',
-  //     value: 'SEA plateaus'
-  //   },
-  //   contact: '合作、採訪、進書、版權洽詢'
-  // }
 };

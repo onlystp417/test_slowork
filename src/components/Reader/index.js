@@ -40,7 +40,6 @@ function Reader() {
     } else {
       setNumPages(numPages + 2);
     }
-    console.log('numPages', numPages);
   }
 
   function onChangeChapter(index) {

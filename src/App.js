@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 // componsnts
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import Reader from '@/components/Reader';
 import FolksMobile from '@/components/FolksMobile';
 import FolksTablet from '@/components/FolksTablet';
+import Campaigns from '@/components/Campaigns';
 
 import './App.sass';
 
 function App() {
+  const { i18n } = useTranslation();
   return (
     <div className="home">
       <Header />
@@ -19,8 +22,9 @@ function App() {
       <div className="tablet">
         <FolksTablet />
       </div>
-      {/* <FolksTablet /> */}
       <Reader />
+      {/* {localStorage.getItem('lang') === 'zhTW' ? <Podcast /> : ''} */}
+      {localStorage.getItem('lang') === 'zhTW' ? <Campaigns /> : ''}
     </div>
   );
 }
