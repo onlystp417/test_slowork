@@ -34,7 +34,7 @@ function HeaderTablet({ onScrollTo }) {
           <nav className="header__nav">
             <div className="links">
               {menuDOM()}
-              <button className="btn buy">
+              <button className="btn buy" onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}>
                 <Cart className="pointer" />
                 <span>{t('header.buy')}</span>
               </button>

@@ -128,7 +128,7 @@ function Reader() {
               <p key={index}>{text}</p>
             ))}
           </div>
-          <button>
+          <button  onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}>
             <Finger />
             <span>{t('buy.btn')}</span>
           </button>
