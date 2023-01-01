@@ -36,7 +36,13 @@
       margin-bottom: 0
 
   &__view
+    position: relative
     margin-bottom: 20px
+    min-width: 80vw
+    min-height: 120vw
+    @media screen and (min-width: 1280px)
+      min-width: 500px
+      min-height: 707px
 
   &__operator
     display: flex
@@ -112,3 +118,31 @@
       position: absolute
       bottom: 0
       padding: 0
+
+.loading
+  width: 3.5rem
+  height: 3.5rem
+  margin: 2rem
+  border-radius: 50%
+  border: 0.3rem solid rgba(#FFFFFF, 0.3)
+  border-top-color: #FFFFFF
+  animation: 1.5s spin infinite linear
+  &-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #FFFFFF22
+    &.hide
+      display: none
+
+  &.multi
+    border-bottom-color: #FFFFFF
+
+@keyframes spin
+  to
+    transform: rotate(360deg)

@@ -30,10 +30,12 @@ function Reader() {
   const [numPages, setNumPages] = useState(null); // 總頁數
   const [pageNumber, setPageNumber] = useState(1); // 頁
   const [chapter, setChapter] = useState(null);
+  const [loading, setLoading] = useState(true); // 總頁數
   const buyDes = t('buy.des', { returnObjects: true });
   const chapters = t('reading', { returnObjects: true });
 
   function onDocumentLoadSuccess({ numPages }) {
+    setLoading(false)
     const lang = localStorage.getItem('lang');
     if (lang === 'zhTW') {
       setNumPages(76);
@@ -85,13 +87,18 @@ function Reader() {
         <div className="desktop">{readerBuyDOM()}</div>
       </section>
       <section className="reader__main">
-        <Document
-          className="reader__view"
-          file={comics[localStorage.getItem('lang')]}
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
-          <Page pageNumber={limitPage()} />
-        </Document>
+        <div className="reader__view">
+          <div className={`loading-wrapper ${loading ? '' : 'hide'}`}>
+            <div className="loading"></div>
+          </div>
+          <Document
+            file={comics[localStorage.getItem('lang')]}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+        </div>
         <div className="reader__operator">
           <button onClick={() => setPageNumber(1)} disabled={limitPage(pageNumber) === 1}>
             <FirstPage />

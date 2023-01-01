@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+
 // componsnts
 import HeaderMobile from '@/components/HeaderMobile';
 import HeaderTablet from '@/components/HeaderTablet';
@@ -16,7 +18,7 @@ function App() {
   useEffect(() => {
     initLang();
   }, []);
-
+  const { i18n } = useTranslation();
   const headerRef = useRef(null)
   const readRef = useRef(null);
   const podcastRef = useRef(null);
@@ -49,17 +51,17 @@ function App() {
         <Reader />
       </div>
       <div ref={podcastRef}>
-        {localStorage.getItem('lang') === 'zhTW' ? <Podcast /> : ''}
+        {i18n.language === 'zhTW' ? <Podcast /> : ''}
       </div>
       <div ref={campaignRef}>
-        {localStorage.getItem('lang') === 'zhTW' ? <Campaigns /> : ''}
+        {i18n.language === 'zhTW' ? <Campaigns /> : ''}
       </div>
       <Footer />
     </div>
   );
 
   function initLang() {
-    if (!localStorage.getItem('lang')) localStorage.setItem('lang', 'zhTW');
+    if (!localStorage.getItem('lang')) localStorage.setItem('lang', i18n.language === 'zhTW');
   }
 
   function scrollTo(refName) {
