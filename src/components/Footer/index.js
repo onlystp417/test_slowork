@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Slowork from '@/assets/images/slowork-logo.svg';
 
-import './index.sass'
+import './index.sass';
 
 function Footer() {
   const { t } = useTranslation();
@@ -19,11 +19,12 @@ function Footer() {
           <img src={Slowork} alt="Slowork" />
         </a>
         <p className="footer-social">
-          <a href="">IG</a>｜
-          <a href="">FB</a>｜
-          <a href="">Twitter</a>
+          <a href="">IG</a>｜<a href="">FB</a>｜<a href="">Twitter</a>
         </p>
-        <p className="mailto"><span>{t('footer.contact')}</span><a href="mailto:contact@sloworkpublishing.com">contact@sloworkpublishing.com</a></p>
+        <p className="mailto">
+          <span>{t('footer.contact')}</span>
+          <a href="mailto:contact@sloworkpublishing.com">contact@sloworkpublishing.com</a>
+        </p>
       </div>
     </div>
   );

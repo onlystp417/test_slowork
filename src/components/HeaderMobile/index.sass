@@ -1,11 +1,6 @@
 .header
-  // width: 100vw
-  position: -webkit-sticky
-  position: sticky
-  top: 0px
   background-color: #000
   padding: 5px 10px
-  z-index: 9
   .menu
     position: absolute
     right: 10px
@@ -71,6 +66,7 @@
       text-align: right
       cursor: pointer
       font-size: 1.125rem
+      margin: 10px 0
       &:hover, &.active
         color: #F6DACF
     .btn:not(.buy)
@@ -86,11 +82,25 @@
         margin-right: 5px
     .langs
       text-align: right
+      margin-bottom: 30px
       .btn
         font-size: .815rem
         padding: 0 4px
       .btn:hover, .btn.active
         color: #F6DACF
+    @media screen and (max-height: 600px)
+      .link
+        line-height: 1.5rem
+        text-align: right
+        cursor: pointer
+        font-size: 1.125rem
+        margin: 5px 0
+      .btn.buy
+        padding: 10px 34px
+        margin-top: 15px
+        margin-bottom: 15px
+        font-size: 18px
+        font-weight: bold
     @media screen and (min-width: 768px)
       flex-grow: 1
       width: auto
@@ -130,3 +140,5 @@
         margin-left: 10%
         .btn
           padding: 0 10px
+
+

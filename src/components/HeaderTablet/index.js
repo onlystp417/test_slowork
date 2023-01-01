@@ -2,9 +2,8 @@ import React, { useRef, useState } from 'react';
 import './index.sass';
 import { useTranslation } from 'react-i18next';
 // images
-import { ReactComponent as Logo } from '@/assets/images/logo.svg';
+import Logo from '@/assets/images/logo.svg';
 import { ReactComponent as Menu } from '@/assets/images/menu.svg';
-import { ReactComponent as Close } from '@/assets/images/close.svg';
 import { ReactComponent as Cart } from '@/assets/images/cart.svg';
 
 function App() {
@@ -19,17 +18,12 @@ function App() {
   }
 
   return (
-    <header className="header">
+    <header className="tablet-header">
       <div className="justify-between">
-        <Logo className="logo" />
-        <label htmlFor="menu" className="menu pointer">
-          <Menu className="pointer" />
-        </label>
-        <input type="checkbox" id="menu" ref={menuSwitch} />
-        <div className="header__operator">
+        <img src={Logo} />
+        <div className="tablet-header__operator">
           <div className="nav-layer" onClick={() => menuSwitch.current.click()} />
-          <nav className="header__nav">
-            <Close className="nav-close pointer" onClick={() => menuSwitch.current.click()} />
+          <nav className="tablet-header__nav">
             <div className="links">
               {menuDOM()}
               <button className="btn buy">
@@ -51,13 +45,13 @@ function App() {
                 </button>
                 <button
                   className={`btn ${i18n.language === 'bu' ? 'active' : ''}`}
-                  onClick={() => setLang('bu')}
+                  onClick={() => setLang('en')}
                 >
                   မြန်မာ
                 </button>
                 <button
                   className={`btn ${i18n.language === 'th' ? 'active' : ''}`}
-                  onClick={() => setLang('th')}
+                  onClick={() => setLang('en')}
                 >
                   ไทย
                 </button>

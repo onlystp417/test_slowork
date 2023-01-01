@@ -31,7 +31,7 @@ function Podcast() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default Podcast;

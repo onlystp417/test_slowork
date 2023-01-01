@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect } from 'react';
 // componsnts
-import Header from '@/components/Header';
+import HeaderMobile from '@/components/HeaderMobile';
+import HeaderDesktop from '@/components/HeaderDesktop';
 import Banner from '@/components/Banner';
 import Reader from '@/components/Reader';
 import FolksMobile from '@/components/FolksMobile';
@@ -13,10 +13,18 @@ import Footer from '@/components/Footer';
 import './App.sass';
 
 function App() {
-  const { i18n } = useTranslation();
+  useEffect(() => {
+    initLang();
+  }, []);
+
   return (
     <div className="home">
-      <Header />
+      <div className="mobile sticky">
+        <HeaderMobile />
+      </div>
+      <div className="tablet sticky">
+        <HeaderDesktop />
+      </div>
       <Banner />
       <div className="mobile">
         <FolksMobile />
@@ -30,6 +38,10 @@ function App() {
       <Footer />
     </div>
   );
+
+  function initLang() {
+    if (!localStorage.getItem('lang')) localStorage.setItem('lang', 'zhTW');
+  }
 }
 
 export default App;

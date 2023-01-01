@@ -58,7 +58,8 @@ export default {
   },
   footer: {
     organizer: 'Production by Slowork Publishing',
-    support: 'Creation supported by Ministry of Culture of Taiwan, The Cultural Fundation of Taiwan',
+    support:
+      'Creation supported by Ministry of Culture of Taiwan, The Cultural Fundation of Taiwan',
     thanks_list: 'Special thanks to SEA Plateaus',
     contact: 'Contact:'
   }
