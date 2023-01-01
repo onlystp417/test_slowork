@@ -7,7 +7,7 @@ import { ReactComponent as Menu } from '@/assets/images/menu.svg';
 import { ReactComponent as Close } from '@/assets/images/close.svg';
 import { ReactComponent as Cart } from '@/assets/images/cart.svg';
 
-function App() {
+function HeaderMobile({ onScrollTo }) {
   const { t, i18n } = useTranslation();
   const menuSwitch = useRef(null);
   const [link, setLink] = useState('about');
@@ -16,6 +16,11 @@ function App() {
     localStorage.setItem('lang', lang);
     const locale = localStorage.getItem('lang');
     i18n.changeLanguage(locale);
+  }
+
+  function toLink(name) {
+    setLink(name);
+    onScrollTo(name);
   }
 
   return (
@@ -75,22 +80,22 @@ function App() {
         <>
           <div
             className={`link ${link === 'about' ? 'active' : ''}`}
-            onClick={() => setLink('about')}
+            onClick={() => toLink('about')}
           >
             {t('header.about')}
           </div>
           <div
             className={`link ${link === 'read' ? 'active' : ''}`}
-            onClick={() => setLink('read')}
+            onClick={() => toLink('read')}
           >
             {t('header.read')}
           </div>
-          <div className={`link ${link === 'buy' ? 'active' : ''}`} onClick={() => setLink('buy')}>
+          <div className={`link ${link === 'podcast' ? 'active' : ''}`} onClick={() => toLink('podcast')}>
             Podcast
           </div>
           <div
             className={`link ${link === 'campaigns' ? 'active' : ''}`}
-            onClick={() => setLink('campaigns')}
+            onClick={() => toLink('campaigns')}
           >
             {t('header.campaigns')}
           </div>
@@ -101,13 +106,13 @@ function App() {
         <>
           <div
             className={`link ${link === 'about' ? 'active' : ''}`}
-            onClick={() => setLink('about')}
+            onClick={() => toLink('about')}
           >
             {t('header.about')}
           </div>
           <div
             className={`link ${link === 'read' ? 'active' : ''}`}
-            onClick={() => setLink('read')}
+            onClick={() => toLink('read')}
           >
             {t('header.read')}
           </div>
@@ -117,4 +122,4 @@ function App() {
   }
 }
 
-export default App;
+export default HeaderMobile;

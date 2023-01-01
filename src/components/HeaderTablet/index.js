@@ -6,7 +6,7 @@ import Logo from '@/assets/images/logo.svg';
 import { ReactComponent as Menu } from '@/assets/images/menu.svg';
 import { ReactComponent as Cart } from '@/assets/images/cart.svg';
 
-function App() {
+function HeaderTablet({ onScrollTo }) {
   const { t, i18n } = useTranslation();
   const menuSwitch = useRef(null);
   const [link, setLink] = useState('about');
@@ -17,13 +17,21 @@ function App() {
     i18n.changeLanguage(locale);
   }
 
+  function toLink(name) {
+    setLink(name);
+    onScrollTo(name);
+  }
+
   return (
-    <header className="tablet-header">
+    <header className="header">
       <div className="justify-between">
         <img src={Logo} />
-        <div className="tablet-header__operator">
+        <div className="menu pointer">
+          <Menu className="pointer" />
+        </div>
+        <div className="header__operator">
           <div className="nav-layer" onClick={() => menuSwitch.current.click()} />
-          <nav className="tablet-header__nav">
+          <nav className="header__nav">
             <div className="links">
               {menuDOM()}
               <button className="btn buy">
@@ -45,13 +53,13 @@ function App() {
                 </button>
                 <button
                   className={`btn ${i18n.language === 'bu' ? 'active' : ''}`}
-                  onClick={() => setLang('en')}
+                  onClick={() => setLang('bu')}
                 >
                   မြန်မာ
                 </button>
                 <button
                   className={`btn ${i18n.language === 'th' ? 'active' : ''}`}
-                  onClick={() => setLang('en')}
+                  onClick={() => setLang('th')}
                 >
                   ไทย
                 </button>
@@ -69,22 +77,22 @@ function App() {
         <>
           <div
             className={`link ${link === 'about' ? 'active' : ''}`}
-            onClick={() => setLink('about')}
+            onClick={() => toLink('about')}
           >
             {t('header.about')}
           </div>
           <div
             className={`link ${link === 'read' ? 'active' : ''}`}
-            onClick={() => setLink('read')}
+            onClick={() => toLink('read')}
           >
             {t('header.read')}
           </div>
-          <div className={`link ${link === 'buy' ? 'active' : ''}`} onClick={() => setLink('buy')}>
+          <div className={`link ${link === 'podcast' ? 'active' : ''}`} onClick={() => toLink('podcast')}>
             Podcast
           </div>
           <div
             className={`link ${link === 'campaigns' ? 'active' : ''}`}
-            onClick={() => setLink('campaigns')}
+            onClick={() => toLink('campaigns')}
           >
             {t('header.campaigns')}
           </div>
@@ -95,13 +103,13 @@ function App() {
         <>
           <div
             className={`link ${link === 'about' ? 'active' : ''}`}
-            onClick={() => setLink('about')}
+            onClick={() => toLink('about')}
           >
             {t('header.about')}
           </div>
           <div
             className={`link ${link === 'read' ? 'active' : ''}`}
-            onClick={() => setLink('read')}
+            onClick={() => toLink('read')}
           >
             {t('header.read')}
           </div>
@@ -111,4 +119,4 @@ function App() {
   }
 }
 
-export default App;
+export default HeaderTablet;
