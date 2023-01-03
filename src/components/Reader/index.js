@@ -35,7 +35,7 @@ function Reader() {
   const chapters = t('reading', { returnObjects: true });
 
   function onDocumentLoadSuccess({ numPages }) {
-    setLoading(false)
+    setLoading(false);
     const lang = localStorage.getItem('lang');
     if (lang === 'zhTW') {
       setNumPages(76);
@@ -92,7 +92,7 @@ function Reader() {
             <div className="loading"></div>
           </div>
           <Document
-            file={comics[localStorage.getItem('lang')]}
+            file={comics[localStorage.getItem('lang') ? localStorage.getItem('lang') : 'zhTW']}
             onLoadSuccess={onDocumentLoadSuccess}
             onLoadProgress={() => setLoading(true)}
           >
@@ -135,7 +135,7 @@ function Reader() {
               <p key={index}>{text}</p>
             ))}
           </div>
-          <button  onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}>
+          <button onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}>
             <Finger />
             <span>{t('buy.btn')}</span>
           </button>
