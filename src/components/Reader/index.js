@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import './index.sass';
+import { openBuyLink } from '@/utils';
 // resource
 import zhComic from '@/assets/comics/zhTW.pdf';
 import enComic from '@/assets/comics/en.pdf';
@@ -129,7 +130,7 @@ function Reader() {
               <p key={index}>{text}</p>
             ))}
           </div>
-          <button onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}>
+          <button onClick={openBuyLink}>
             <Finger />
             <span>{t('buy.btn')}</span>
           </button>

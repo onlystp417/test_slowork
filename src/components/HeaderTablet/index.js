@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './index.sass';
 import { useTranslation } from 'react-i18next';
+import { openBuyLink } from '@/utils';
 // images
 import Logo from '@/assets/images/logo.svg';
 import { ReactComponent as Menu } from '@/assets/images/menu.svg';
@@ -34,10 +35,7 @@ function HeaderTablet({ onScrollTo }) {
           <nav className="header__nav">
             <div className="links">
               {menuDOM()}
-              <button
-                className="btn buy"
-                onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}
-              >
+              <button className="btn buy" onClick={openBuyLink}>
                 <Cart className="pointer" />
                 <span>{t('header.buy')}</span>
               </button>
