@@ -23,7 +23,7 @@ const comics = {
   th: thComic
 };
 
-const CHAPTER_PAGE_NUMBER = [12, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99]; // 後四章為中文版 -2 頁數
+const CHAPTER_PAGE_NUMBER = [1, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99]; // 後四章為中文版 -2 頁數
 
 function Reader() {
   // useEffect(() => {
