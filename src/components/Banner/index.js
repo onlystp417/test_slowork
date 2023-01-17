@@ -19,9 +19,23 @@ function Banner() {
           <img src={SloworkLogo} alt="Slowork 慢工出版" />
         </div>
         <div className="banner__main">
-          {mainText.map((text, index) => (
-            <p key={index}>{text}</p>
-          ))}
+          <div className="paragraph">
+            <p className="title">■ {mainText[0].title}</p>
+            {mainText[0].content.map((content, index) => (
+              <span key={index} className={`content ${content.highlight ? 'highlight' : ''}`}>
+                {content.text}
+              </span>
+            ))}
+          </div>
+          <div className="paragraph">
+            <p className="title">■ {mainText[1].title}</p>
+            {mainText[1].content.map((content, index) => (
+              <span key={index} className={`content ${content.highlight ? 'highlight' : ''}`}>
+                {content.text}
+              </span>
+            ))}
+          </div>
+          <p className="paragraph">{mainText[1].ps}</p>
         </div>
       </div>
     </div>

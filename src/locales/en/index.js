@@ -10,8 +10,37 @@ export default {
     buy: 'Buy this book'
   },
   main: [
-    "On February 1, 2023, the Myanmar military coup will enter its third year. According to statistics from Burmese human rights organization the Assistance Association for Political Prisoners (AAPP),  the military has arrested more than 16,000 people and killed more than 2,500 people since the coup. As of August this year, the United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) estimates that 1.3 million people have been displaced from their homes, with as many as 7.8 million schoolchildren put out of school. Compared with the struggles in Ukraine and Hong Kong, Myanmar seems isolated and without hope in its struggle for democracy, while the military government's oppressive behavior has not slowed down. However, the Burmese people continue to join forces across ethnic groups to fight against dictatorial power.",
-    'French writer Frédéric Debomy has been observing the situation in Myanmar for a long time, while artist Lau Kwong-Shing has been closely following the democracy movement in Hong Kong. In cooperation with Taiwan’s Slowork Publishing, they have been working together on a graphic novel to record what has happened in the two years since the coup in Myanmar, and to inform readers of the historical and political context behind it. This project has been produced in four languages: Chinese*, English, Thai, and Burmese. It is hoped that through the artistic yet easy-to-understand imagery and text, human rights issues and the democracy movement in Myanmar will gain more attention and be more widely understood.'
+    {
+      title: 'Myanmar military coup is still ongoing and lacks international attention',
+      content: [
+        {
+          text: 'On February 1, 2023, the Myanmar military coup will enter its third year. According to statistics from Burmese human rights organization the Assistance Association for Political Prisoners (AAPP),',
+          highlight: false
+        },
+        {
+          text: 'the military has arrested more than 16,000 people and killed more than 2,500 people since the coup. As of August 2022, the United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) estimates that 1.3 million people have been displaced from their homes, with as many as 7.8 million schoolchildren put out of school.',
+          highlight: true
+        },
+        {
+          text: "Compared with the struggles in Ukraine and Hong Kong, Myanmar seems isolated and without hope in its struggle for democracy, while the military government's oppressive behavior has not slowed down. However, the Burmese people continue to join forces across ethnic groups to fight against dictatorial power.",
+          highlight: false
+        }
+      ]
+    },
+    {
+      title: 'A graphic novel collaborated between Taiwan, France and Hong Kong',
+      content: [
+        {
+          text: 'French writer Frédéric Debomy has been observing the situation in Myanmar for a long time, while artist Lau Kwong-Shing has been closely following the democracy movement in Hong Kong. In cooperation with Taiwan’s Slowork Publishing, they have been working together on a graphic novel to record what has happened in the two years since the coup in Myanmar, and to inform readers of the historical and political context behind it.',
+          highlight: false
+        },
+        {
+          text: 'This project has been produced in four languages: Chinese(Partial content), English, Thai, and Burmese. It is hoped that through the artistic yet easy-to-understand imagery and text, human rights issues and the democracy movement in Myanmar will gain more attention and be more widely understood.',
+          highlight: true
+        }
+      ],
+      ps: '* Partial content in Chinese.'
+    }
   ],
   folks: {
     script: {
@@ -35,7 +64,8 @@ export default {
       ]
     }
   },
-  readingTitle: 'Read《 Myanmar, the last stand 》',
+  readingTitle: 'Myanmar, the last stand Free reading',
+  readingSubTitle: 'French-English Translator: Alice Heathwood',
   reading: [
     '#HistoryRepeating',
     '#ATasteOfFreedom',
@@ -58,6 +88,8 @@ export default {
   },
   footer: {
     organizer: 'Production by Slowork Publishing',
+    designer: 'Web design by DW',
+    engineer: 'Coding by Jin Hsieh',
     support:
       'Creation supported by Ministry of Culture of Taiwan, The Cultural Fundation of Taiwan',
     thanks_list: 'Special thanks to SEA Plateaus',

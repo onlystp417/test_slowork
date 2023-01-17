@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Slowork from '@/assets/images/slowork-logo.svg';
+import Slowork from '@/assets/images/slowork-logo.png';
 
 import './index.sass';
 
@@ -11,6 +11,8 @@ function Footer() {
     <div className="footer">
       <div className="footer__left">
         <p>{t('footer.organizer')}</p>
+        <p>{t('footer.designer')}</p>
+        <p>{t('footer.engineer')}</p>
         <p>{t('footer.support')}</p>
         <p>{t('footer.thanks_list')}</p>
       </div>

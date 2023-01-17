@@ -8,6 +8,7 @@ import { openBuyLink } from '@/utils';
 // resource
 import zhComic from '@/assets/comics/zhTW.pdf';
 import enComic from '@/assets/comics/en.pdf';
+import thComic from '@/assets/comics/th.pdf';
 // images
 import { ReactComponent as FirstPage } from '@/assets/images/angle-double-left.svg';
 import { ReactComponent as Prev } from '@/assets/images/angle-left.svg';
@@ -18,7 +19,8 @@ import Comic from '@/assets/images/book-cover.png';
 
 const comics = {
   zhTW: zhComic,
-  en: enComic
+  en: enComic,
+  th: thComic
 };
 
 const CHAPTER_PAGE_NUMBER = [12, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99]; // 後四章為中文版 -2 頁數
@@ -73,6 +75,7 @@ function Reader() {
     <div className="reader">
       <section className="reader__chapter">
         <h2 className="reader__title">{t('readingTitle')}</h2>
+        <p className="reader__subtitle">{t('readingSubTitle')}</p>
         <div className="chapter">
           {chapters.map((text, index) => (
             <button

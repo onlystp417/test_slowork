@@ -3,6 +3,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 import zhTW from '@/locales/zhTW';
 import en from '@/locales/en';
+import th from '@/locales/th';
+// import en from '@/locales/bu';
 
 i18n
   .use(LanguageDetector)
@@ -12,7 +14,8 @@ i18n
     // we init with resources
     resources: {
       en: { translation: en },
-      zhTW: { translation: zhTW }
+      zhTW: { translation: zhTW },
+      th: { translation: th }
     },
     fallbackLng: 'en',
     debug: true,

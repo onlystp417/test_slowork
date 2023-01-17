@@ -55,6 +55,16 @@ function Campaigns() {
                 <span>簡介</span>
                 {item.intro}
               </div>
+              {item.link ? (
+                <div className="link">
+                  <span>報名：</span>
+                  <a href={item.link} target="_blank" rel="noreferrer">
+                    {item.link}
+                  </a>
+                </div>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         ))}

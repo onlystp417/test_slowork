@@ -19,12 +19,12 @@ function Podcast() {
               <img src={Cahnnel} alt="鳴個喇叭，緬甸街" />
             </div>
             <div className="info">
-              <a href="" className="play">
+              <a href={item.link} className="play" target="_blank" rel="noreferrer">
                 <Play />
               </a>
               <div className="text">
-                <p>{item}</p>
-                <span>鳴個喇叭，緬甸街｜</span>
+                <p>{item.title}</p>
+                <span>{item.info}</span>
               </div>
             </div>
           </div>

@@ -63,7 +63,7 @@ function HeaderMobile({ onScrollTo }) {
                 </button>
                 <button
                   className={`btn ${i18n.language === 'th' ? 'active' : ''}`}
-                  onClick={() => setLang('en')}
+                  onClick={() => setLang('th')}
                 >
                   ไทย
                 </button>

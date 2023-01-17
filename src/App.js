@@ -85,9 +85,10 @@ function App() {
       });
     } else {
       const offsetTop = refs[refName].current.offsetTop;
-      const headerHeight = headerRef.current.clientHeight;
-      const scrollTop = offsetTop - headerHeight;
-      console.log(offsetTop, headerHeight);
+      const scrollTop = offsetTop;
+      // const headerHeight = headerRef.current.clientHeight;
+      // const scrollTop = offsetTop - headerHeight;
+      // console.log(offsetTop, headerHeight);
       window.scroll({
         top: scrollTop,
         left: 0,
