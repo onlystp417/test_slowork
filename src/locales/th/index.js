@@ -81,7 +81,8 @@ export default {
     '#ทุกอย่างจะผ่านไปด้วยดี'
   ],
   buy: {
-    btn: 'Buy this book',
+    btn_tw: 'Buy this book(Taiwan)',
+    btn_os: 'Buy this book(Oversea)',
     des: [
       'To support this project, please purchase bilingual (Chinese and English) paper copies of our books, and support global delivery to help spread our literature far and wide.',
       'For copies purchased directly from Slowork Publishing before February 28 2023, 10% of the proceeds will be donated to related organizations, such as Taiwan Alliance for Myanmar.'

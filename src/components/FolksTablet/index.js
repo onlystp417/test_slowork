@@ -20,17 +20,17 @@ function Folks() {
     <div className="folks">
       <div className="folk">
         <div className="folk__header expand__header" onClick={() => setExpand('script')}>
-          <input type="checkbox" id="script" checked={currentExpand === 'script'} />
+          <input type="checkbox" id="script" checked={currentExpand === 'script'} readOnly />
           <DropArrow className="drop" />
           <div className="title">{t('folks.script.name')}</div>
         </div>
         <div className="folk__header expand__header" onClick={() => setExpand('comic')}>
-          <input type="checkbox" id="comic" checked={currentExpand === 'comic'} />
+          <input type="checkbox" id="comic" checked={currentExpand === 'comic'} readOnly />
           <DropArrow className="drop" />
           <div className="title">{t('folks.comic.name')}</div>
         </div>
         <div className="folk__header expand__header" onClick={() => setExpand('publishing')}>
-          <input type="checkbox" id="publishing" checked={currentExpand === 'publishing'} />
+          <input type="checkbox" id="publishing" checked={currentExpand === 'publishing'} readOnly />
           <DropArrow className="drop" />
           <div className="title">{t('folks.publishing.name')}</div>
         </div>

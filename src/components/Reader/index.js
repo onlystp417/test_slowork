@@ -135,9 +135,16 @@ function Reader() {
               <p key={index}>{text}</p>
             ))}
           </div>
-          <button onClick={openBuyLink}>
+          <button onClick={() =>window.open('https://myship.7-11.com.tw/general/detail/GM2301123831744', '_blank')}>
             <Finger />
-            <span>{t('buy.btn')}</span>
+            <span>{t('buy.btn_tw')}</span>
+          </button>
+          <button onClick={()=>window.open(
+            'http://www.sloworkpublishing.com/shop/index.php?route=product/product&path=68_70&product_id=104',
+            '_blank'
+          )}>
+            <Finger />
+            <span>{t('buy.btn_os')}</span>
           </button>
         </div>
       </section>
@@ -151,7 +158,7 @@ function Reader() {
         <Document
           options={{
             cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
-            cMapPacked: true,
+            cMapPacked: true
           }}
           file={comics[localStorage.getItem('lang')]}
           onLoadSuccess={onDocumentLoadSuccess}

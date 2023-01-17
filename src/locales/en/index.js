@@ -1,12 +1,19 @@
 export default {
-  // news: [
-  //   '2022年12月22日（中央社）聯合國安全理事會今天通過決議案，要求緬甸軍政府釋放民主領袖翁山蘇姬。這是安理會有史以來，首次針對這個動盪不安的東南亞國家局勢通過決議案。',
-  //   '2022年12月20日（中央社）翁山蘇姬案下週結辯，緬甸軍政府法庭將做最終判決。'
-  // ],
+  news: [
+    {
+      id: 1,
+      content:
+        '2023年1月13日（香港01）英國《衛報》報導，緬甸空軍戰機於當地時間1月10日，越境印度轟炸反政府的少數民族民間武裝組織欽民族軍（Chin National Army）。造成最少7人死亡、20人受傷。'
+    },
+    {
+      id: 2,
+      content: '2023年1月12日（關鍵評論網）一場泰國緝毒行動，意外起獲緬甸軍政府領導人成年子女資產'
+    }
+  ],
   header: {
     title: 'Myanmar, the last stand',
     about: 'About',
-    read: 'Reading',
+    read: 'Free Reading',
     buy: 'Buy this book'
   },
   main: [
@@ -35,7 +42,7 @@ export default {
           highlight: false
         },
         {
-          text: 'This project has been produced in four languages: Chinese(Partial content), English, Thai, and Burmese. It is hoped that through the artistic yet easy-to-understand imagery and text, human rights issues and the democracy movement in Myanmar will gain more attention and be more widely understood.',
+          text: 'This project has been produced in four languages: Chinese*, English, Thai, and Burmese. It is hoped that through the artistic yet easy-to-understand imagery and text, human rights issues and the democracy movement in Myanmar will gain more attention and be more widely understood.',
           highlight: true
         }
       ],
@@ -80,7 +87,8 @@ export default {
     '#Everything will be ok'
   ],
   buy: {
-    btn: 'Buy this book',
+    btn_tw: 'Buy this book(Taiwan)',
+    btn_os: 'Buy this book(Oversea)',
     des: [
       'To support this project, please purchase bilingual (Chinese and English) paper copies of our books, and support global delivery to help spread our literature far and wide.',
       'For copies purchased directly from Slowork Publishing before February 28 2023, 10% of the proceeds will be donated to related organizations, such as Taiwan Alliance for Myanmar.'
