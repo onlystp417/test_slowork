@@ -14,6 +14,8 @@ import Campaigns from '@/components/Campaigns';
 import Podcast from '@/components/Podcast';
 import Footer from '@/components/Footer';
 
+import TempBanner from '@/components/TempBanner';
+
 import './App.sass';
 
 function App() {
@@ -48,19 +50,27 @@ function App() {
       <div>
         <Marquee />
       </div>
-      <Banner />
-      <div className="mobile">
-        <FolksMobile />
+      <div>
+        {i18n.language !== 'bu' ? (
+          <div>
+            <Banner />
+            <div className="mobile">
+              <FolksMobile />
+            </div>
+            <div className="tablet">
+              <FolksTablet />
+            </div>
+            <div ref={readRef}>
+              <Reader />
+            </div>
+            <div ref={podcastRef}>{i18n.language === 'zhTW' ? <Podcast /> : ''}</div>
+            <div ref={campaignRef}>{i18n.language === 'zhTW' ? <Campaigns /> : ''}</div>
+            <Footer />
+          </div>
+        ) : (
+          <TempBanner />
+        )}
       </div>
-      <div className="tablet">
-        <FolksTablet />
-      </div>
-      <div ref={readRef}>
-        <Reader />
-      </div>
-      <div ref={podcastRef}>{i18n.language === 'zhTW' ? <Podcast /> : ''}</div>
-      <div ref={campaignRef}>{i18n.language === 'zhTW' ? <Campaigns /> : ''}</div>
-      <Footer />
     </div>
   );
 

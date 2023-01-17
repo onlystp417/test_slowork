@@ -5,6 +5,8 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import './index.sass';
 import { openBuyLink } from '@/utils';
+import { pdfjs } from 'react-pdf';
+
 // resource
 import zhComic from '@/assets/comics/zhTW.pdf';
 import enComic from '@/assets/comics/en.pdf';
@@ -147,6 +149,10 @@ function Reader() {
     if (isVisited) {
       return (
         <Document
+          options={{
+            cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+            cMapPacked: true,
+          }}
           file={comics[localStorage.getItem('lang')]}
           onLoadSuccess={onDocumentLoadSuccess}
           onLoadProgress={() => setLoading(true)}
