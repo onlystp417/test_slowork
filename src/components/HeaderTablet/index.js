@@ -34,7 +34,10 @@ function HeaderTablet({ onScrollTo }) {
           <nav className="header__nav">
             <div className="links">
               {menuDOM()}
-              <button className="btn buy" onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}>
+              <button
+                className="btn buy"
+                onClick={() => window.open('http://www.sloworkpublishing.com/shop/', '_blank')}
+              >
                 <Cart className="pointer" />
                 <span>{t('header.buy')}</span>
               </button>
@@ -81,13 +84,13 @@ function HeaderTablet({ onScrollTo }) {
           >
             {t('header.about')}
           </div>
-          <div
-            className={`link ${link === 'read' ? 'active' : ''}`}
-            onClick={() => toLink('read')}
-          >
+          <div className={`link ${link === 'read' ? 'active' : ''}`} onClick={() => toLink('read')}>
             {t('header.read')}
           </div>
-          <div className={`link ${link === 'podcast' ? 'active' : ''}`} onClick={() => toLink('podcast')}>
+          <div
+            className={`link ${link === 'podcast' ? 'active' : ''}`}
+            onClick={() => toLink('podcast')}
+          >
             Podcast
           </div>
           <div
@@ -107,10 +110,7 @@ function HeaderTablet({ onScrollTo }) {
           >
             {t('header.about')}
           </div>
-          <div
-            className={`link ${link === 'read' ? 'active' : ''}`}
-            onClick={() => toLink('read')}
-          >
+          <div className={`link ${link === 'read' ? 'active' : ''}`} onClick={() => toLink('read')}>
             {t('header.read')}
           </div>
         </>

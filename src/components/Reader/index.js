@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import React, { useState } from 'react';
+import { Document, Page } from 'react-pdf';
 import { useTranslation } from 'react-i18next';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -23,9 +23,9 @@ const comics = {
 const CHAPTER_PAGE_NUMBER = [12, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99]; // 後四章為中文版 -2 頁數
 
 function Reader() {
-  useEffect(() => {
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-  }, []);
+  // useEffect(() => {
+  //   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+  // }, []);
   const { t } = useTranslation();
   const [numPages, setNumPages] = useState(null); // 總頁數
   const [pageNumber, setPageNumber] = useState(1); // 頁
@@ -91,13 +91,7 @@ function Reader() {
           <div className={`loading-wrapper ${loading ? '' : 'hide'}`}>
             <div className="loading"></div>
           </div>
-          <Document
-            file={comics[localStorage.getItem('lang') ? localStorage.getItem('lang') : 'zhTW']}
-            onLoadSuccess={onDocumentLoadSuccess}
-            onLoadProgress={() => setLoading(true)}
-          >
-            <Page pageNumber={limitPage()} />
-          </Document>
+          {readerDOM()}
         </div>
         <div className="reader__operator">
           <button onClick={() => setPageNumber(1)} disabled={limitPage(pageNumber) === 1}>
@@ -142,6 +136,31 @@ function Reader() {
         </div>
       </section>
     );
+  }
+
+  function readerDOM() {
+    const isVisited = localStorage.getItem('isVisited');
+    if (isVisited) {
+      return (
+        <Document
+          file={comics[localStorage.getItem('lang')]}
+          onLoadSuccess={onDocumentLoadSuccess}
+          onLoadProgress={() => setLoading(true)}
+        >
+          <Page pageNumber={limitPage()} />
+        </Document>
+      );
+    } else {
+      return (
+        <Document
+          file={zhComic}
+          onLoadSuccess={onDocumentLoadSuccess}
+          onLoadProgress={() => setLoading(true)}
+        >
+          <Page pageNumber={limitPage()} />
+        </Document>
+      );
+    }
   }
 }
 

@@ -1,0 +1,45 @@
+.marquee
+  position: relative
+  overflow: hidden
+  height: 35px
+  line-height: 35px
+  background-color: #3A559F
+  color: #FFFFFFDD
+  color: #505050
+  background-color: #f0ee99
+
+  &__title
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: fit-content
+    padding: 0 8px
+    font-family: 'Noto Serif'
+    font-size: 15px
+    background-color: #E85151
+    color: #fff
+
+  &__content
+    display: inline-block
+    white-space: nowrap
+    transform: translateX(100%)
+    animation-name: marquee
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+    font-size: 14px
+    font-weight: 700
+    vertical-align: top
+    // animation-duration: 18s
+    span + span
+      margin-left: 400px
+
+  @keyframes marquee
+    0%
+      transform: translateX(100%)
+    100%
+      transform: translateX(-100%)
+  // @media screen and (min-width: 992px)
+  //   height: 42px
+  //   line-height: 42px
+  //   font-size: 18px

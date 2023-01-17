@@ -19,9 +19,17 @@ function Footer() {
           <img src={Slowork} alt="Slowork" />
         </a>
         <p className="footer-social">
-          <a href="https://www.instagram.com/sloworkpublishing/" target="_blank" rel="noreferrer">IG</a>｜
-          <a href="https://www.facebook.com/sloworkpublishing" target="_blank" rel="noreferrer">FB</a>｜
-          <a href="https://twitter.com/sloworkcomic" target="_blank" rel="noreferrer">Twitter</a>
+          <a href="https://www.instagram.com/sloworkpublishing/" target="_blank" rel="noreferrer">
+            IG
+          </a>
+          ｜
+          <a href="https://www.facebook.com/sloworkpublishing" target="_blank" rel="noreferrer">
+            FB
+          </a>
+          ｜
+          <a href="https://twitter.com/sloworkcomic" target="_blank" rel="noreferrer">
+            Twitter
+          </a>
         </p>
         <p className="mailto">
           <span>{t('footer.contact')}</span>

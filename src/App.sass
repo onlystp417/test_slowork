@@ -16,8 +16,11 @@
 .sticky
   position: -webkit-sticky
   position: sticky
-  top: 0px
+  top: 0
   z-index: 9
+  transition: all .3s ease
+  &.hide
+    top: -6rem
 
 .scroll
   position: fixed
