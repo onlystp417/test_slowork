@@ -15,7 +15,7 @@ const notifications = [
 
 function Marquee() {
   const [animationSecs, setAnimationSecs] = useState(0);
-  const ANIM_UNIT_SEC = 20;
+  const ANIM_UNIT_SEC = 40;
 
   useEffect(() => {
     fetchNotifications();

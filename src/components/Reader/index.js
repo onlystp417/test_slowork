@@ -17,7 +17,7 @@ import { ReactComponent as Prev } from '@/assets/images/angle-left.svg';
 import { ReactComponent as Next } from '@/assets/images/angle-right.svg';
 import { ReactComponent as LastPage } from '@/assets/images/angle-double-right.svg';
 import { ReactComponent as Finger } from '@/assets/images/cursor-finger.svg';
-import Comic from '@/assets/images/book-cover.png';
+import ComicCover from '@/assets/images/comic-cover.png';
 
 const comics = {
   zhTW: zhComic,
@@ -128,7 +128,7 @@ function Reader() {
   function readerBuyDOM() {
     return (
       <section className="reader__buy">
-        <img src={Comic} alt={t('header.title')} />
+        <img src={ComicCover} alt={t('header.title')} />
         <div>
           <div className="des">
             {buyDes.map((text, index) => (

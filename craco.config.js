@@ -8,7 +8,7 @@ module.exports = {
     },
     configure: {
       output: {
-        // publicPath: process.env === 'product ? '/myanmar_the_last_stand/' : '',
+        // publicPath: '/myanmar_the_last_stand/'
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as Play } from '@/assets/images/play.svg';
-import Cahnnel from '@/assets/images/podcast-cover.png';
+import PodcastCover from '@/assets/images/podcast-channel.png';
 
 import './index.sass';
 
@@ -16,7 +16,7 @@ function Podcast() {
         {list.map((item, index) => (
           <div className="podcast__item" key={index}>
             <div className="img">
-              <img src={Cahnnel} alt="鳴個喇叭，緬甸街" />
+              <img src={PodcastCover} alt="鳴個喇叭，緬甸街" />
             </div>
             <div className="info">
               <a href={item.link} className="play" target="_blank" rel="noreferrer">
