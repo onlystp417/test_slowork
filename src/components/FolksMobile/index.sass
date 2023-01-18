@@ -8,6 +8,10 @@
     &__header
       color: #FFF
       font-size: 1.125rem
+      &.active ~ .folk__content
+        max-height: 2000px
+      &.active svg
+        transform: rotate(90deg)
     
     &__content
       max-height: 0px

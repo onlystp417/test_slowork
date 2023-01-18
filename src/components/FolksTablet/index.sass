@@ -13,8 +13,13 @@
       color: #FFF
       font-size: 1.125rem
       margin-bottom: 20px
-      &:has(input:checked) ~ .expand__content
+      // &:has(input:checked) ~ .expand__content
+      //   border-top: 1px solid #FFF
+      &.active ~ .folk__content
+        max-height: 2000px
         border-top: 1px solid #FFF
+      &.active svg
+        transform: rotate(90deg)
     
     &__content
       flex: 0 0 100%

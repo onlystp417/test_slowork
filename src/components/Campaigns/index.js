@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // images
 import { ReactComponent as DropArrow } from '@/assets/images/caret-right-pink.svg';
@@ -8,6 +8,7 @@ import './index.sass';
 
 function Campaigns() {
   const { t } = useTranslation();
+  const [tab, setTab] = useState('');
   const listArray = t('campaigns.list', { returnObjects: true });
   return (
     <div className="campaign">
@@ -15,11 +16,13 @@ function Campaigns() {
       <div className="campaign__list">
         {listArray.map(item => (
           <div className="campaign__item expand" key={item.id}>
-            <label className="campaign__header expand__header" htmlFor={item.id}>
-              <input type="checkbox" id={item.id} />
+            <div
+              className={`campaign__header expand__header ${tab === item.id ? 'active' : ''}`}
+              onClick={() => onSetTab(item.id)}
+            >
               <DropArrow className="drop" />
               <div className="title">{item.title}</div>
-            </label>
+            </div>
             <div className="campaign__content expand__content">
               <div className="info">
                 <p>
@@ -74,6 +77,11 @@ function Campaigns() {
       </div>
     </div>
   );
+
+  function onSetTab(currTab) {
+    if (currTab === tab) setTab(null);
+    else setTab(currTab);
+  }
 }
 
 export default Campaigns;
