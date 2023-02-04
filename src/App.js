@@ -48,29 +48,21 @@ function App() {
         </div>
       </div>
       <div>
-        <Marquee />
+        {i18n.language === 'zhTW' ? <Marquee /> : ''}
       </div>
-      <div>
-        {i18n.language !== 'bu' ? (
-          <div>
-            <Banner />
-            <div className="mobile">
-              <FolksMobile />
-            </div>
-            <div className="tablet">
-              <FolksTablet />
-            </div>
-            <div ref={readRef}>
-              <Reader />
-            </div>
-            <div ref={podcastRef}>{i18n.language === 'zhTW' ? <Podcast /> : ''}</div>
-            <div ref={campaignRef}>{i18n.language === 'zhTW' ? <Campaigns /> : ''}</div>
-            <Footer />
-          </div>
-        ) : (
-          <TempBanner />
-        )}
+      <Banner />
+      <div className="mobile">
+        <FolksMobile />
       </div>
+      <div className="tablet">
+        <FolksTablet />
+      </div>
+      <div ref={readRef}>
+        <Reader />
+      </div>
+      <div ref={podcastRef}>{i18n.language === 'zhTW' ? <Podcast /> : ''}</div>
+      <div ref={campaignRef}>{i18n.language === 'zhTW' ? <Campaigns /> : ''}</div>
+      <Footer />
     </div>
   );
 

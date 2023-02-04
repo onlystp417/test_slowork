@@ -58,7 +58,7 @@ function HeaderMobile({ onScrollTo }) {
                 <button
                   title="coming soon"
                   className={`btn ${i18n.language === 'bu' ? 'active' : ''}`}
-                  onClick={() => setLang('en')}
+                  onClick={() => setLang('bu')}
                 >
                   မြန်မာ
                 </button>

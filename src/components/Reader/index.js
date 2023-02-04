@@ -11,6 +11,7 @@ import { pdfjs } from 'react-pdf';
 import zhComic from '@/assets/comics/zhTW.pdf';
 import enComic from '@/assets/comics/en.pdf';
 import thComic from '@/assets/comics/th.pdf';
+import buComic from '@/assets/comics/bu.pdf';
 // images
 import { ReactComponent as FirstPage } from '@/assets/images/angle-double-left.svg';
 import { ReactComponent as Prev } from '@/assets/images/angle-left.svg';
@@ -22,10 +23,11 @@ import ComicCover from '@/assets/images/comic-cover.png';
 const comics = {
   zhTW: zhComic,
   en: enComic,
-  th: thComic
+  th: thComic,
+  bu: buComic
 };
 
-const CHAPTER_PAGE_NUMBER = [1, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99]; // 後四章為中文版 -2 頁數
+const CHAPTER_PAGE_NUMBER = [1, 22, 31, 43, 50, 56, 63, 75, 80, 90, 99, 111]; // 後四章為中文版 -2 頁數
 
 function Reader() {
   // useEffect(() => {

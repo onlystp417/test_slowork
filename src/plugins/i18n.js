@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import zhTW from '@/locales/zhTW';
 import en from '@/locales/en';
 import th from '@/locales/th';
+import bu from '@/locales/bu';
 // import en from '@/locales/bu';
 
 i18n
@@ -15,7 +16,8 @@ i18n
     resources: {
       en: { translation: en },
       zhTW: { translation: zhTW },
-      th: { translation: th }
+      th: { translation: th },
+      bu: { translation: bu }
     },
     fallbackLng: 'en',
     debug: true,

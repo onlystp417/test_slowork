@@ -1,17 +1,53 @@
 export default {
-  // news: [
-  //   '2022年12月22日（中央社）聯合國安全理事會今天通過決議案，要求緬甸軍政府釋放民主領袖翁山蘇姬。這是安理會有史以來，首次針對這個動盪不安的東南亞國家局勢通過決議案。',
-  //   '2022年12月20日（中央社）翁山蘇姬案下週結辯，緬甸軍政府法庭將做最終判決。'
-  // ],
+  news: [
+    {
+      id: 1,
+      content:
+        '2023年1月13日（香港01）英國《衛報》報導，緬甸空軍戰機於當地時間1月10日，越境印度轟炸反政府的少數民族民間武裝組織欽民族軍（Chin National Army）。造成最少7人死亡、20人受傷。'
+    },
+    {
+      id: 2,
+      content: '2023年1月12日（關鍵評論網）一場泰國緝毒行動，意外起獲緬甸軍政府領導人成年子女資產'
+    }
+  ],
   header: {
     title: 'Myanmar, the last stand',
-    about: 'About',
-    read: 'Reading',
-    buy: 'Buy this book'
+    about: 'အကြောင်းအရာ',
+    read: 'အခမဲ့ဖတ်ရှုရန်၊',
+    buy: 'စာအုပ်ဝယ်မည်။'
   },
   main: [
-    "On February 1, 2023, the Myanmar military coup will enter its third year. According to statistics from Burmese human rights organization the Assistance Association for Political Prisoners (AAPP),  the military has arrested more than 16,000 people and killed more than 2,500 people since the coup. As of August this year, the United Nations Office for the Coordination of Humanitarian Affairs (UN OCHA) estimates that 1.3 million people have been displaced from their homes, with as many as 7.8 million schoolchildren put out of school. Compared with the struggles in Ukraine and Hong Kong, Myanmar seems isolated and without hope in its struggle for democracy, while the military government's oppressive behavior has not slowed down. However, the Burmese people continue to join forces across ethnic groups to fight against dictatorial power.",
-    'French writer Frédéric Debomy has been observing the situation in Myanmar for a long time, while artist Lau Kwong-Shing has been closely following the democracy movement in Hong Kong. In cooperation with Taiwan’s Slowork Publishing, they have been working together on a graphic novel to record what has happened in the two years since the coup in Myanmar, and to inform readers of the historical and political context behind it. This project has been produced in four languages: Chinese*, English, Thai, and Burmese. It is hoped that through the artistic yet easy-to-understand imagery and text, human rights issues and the democracy movement in Myanmar will gain more attention and be more widely understood.'
+    {
+      title: 'မြန်မာနိုင်ငံ၏ စစ်အာဏာသိမ်းမှု ဆက်လက်တည်ရှိနေသောကြောင့် ပြည့်တွင်းအခြေအနေဆိုးရွားနေသော်လည်း နိုင်ငံတကာ၏ အာရုံစိုက်မှု ကင်းမဲ့နေသည်။',
+      content: [
+        {
+          text: '၂၀၂၃ ခုနှစ် ဖေဖော်ဝါရီလ ၁ ရက်နေ့တွင် မြန်မာနိုင်ငံ၏ စစ်တပ်အာဏာသိမ်းမှုသည်  သုံးနှစ်တာကာလအတွင်းသို့ ရောက်ရှိတော့မည် ဖြစ်သည်။ မြန်မာနိုင်ငံ လူ့အခွင့်အရေးအဖွဲ့ 「နိုင်ငံရေး အကျဉ်းသားများ ကူညီစောင့်ရှောက်ရေးအသင်း」Assistance Association for Political Prisoners (AAPP )၏ စာရင်းဇယားများအရ ',
+          highlight: false
+        },
+        {
+          text: ' စစ်တပ်အာဏာသိမ်းပြီးနောက်တွင် ပြည်သူပေါင်း ၁၆၀၀၀ ကျော်ကို ဖမ်းဆီးခဲ့ပြီး၊ လူဦးရေ ၂၅၀၀ ကျော်ကို သတ်ဖြတ်ခဲ့သည်။ ၂၀၂၂ ခုနှစ် ဩဂုတ်လအထိ ကုလသမဂ္ဂ လူသားချင်းစာနာထောက်ထားမှုဆိုင်ရာ ညှိနှိုင်းရေး အဖွဲ့ (OCHA)၏ ခန့်မှန်းချက်အရ လူဦးရေ ၁.၃ သန်းသည် အိုးမဲ့အိမ်မဲ့ ဖြစ်ခဲ့ရပြီး ကျောင်းမတတ်ရသော ကျောင်းသားပေါင်း ၇.၈ သန်းထိရှိလာခဲ့ကြောင်း သိရသည်။ ',
+          highlight: true
+        },
+        {
+          text: " ယူကရိန်းတော်လှန်ရေး ၊ဟောင်ကောင်တော်လှန်ရေးနှင့် နှိုင်းယှဉ်ပါက မြန်မာနိုင်ငံ၏ ဒီမိုကရေစီ ရရှိရေးအတွက် ကြိုးပမ်းသောတော်လှန်ရေးသည် အကူအညီမဲ့၍ အထီးကျန်ပြီး စစ်အာဏာရှင်အစိုးရ၏ နှိမ်နှင်းမှုများလည်း လျှော့နည်း သွားခြင်း မရှိပါ။သို့သော်လည်း မြန်မာလူမျိုးများသည် စစ်အာဏာရှင်စနစ်အား တိုက်ထုတ်ရန်အတွက် တိုင်းရင်းသားလူမျိုးမခွဲခြားဘဲ  စည်းလုံးညီညွတ်စွာ ဆက်လက်ပြီးကြိုးပမ်း နေကြပါသည်။",
+          highlight: false
+        }
+      ]
+    },
+    {
+      title: 'သရုပ်ပြပုံနှင့်စာသားကို ထိုင်ဝမ်၊ ပြင်သစ်နှင့် ဟောင်ကောင် သုံးနိုင်ငံ ပူးပေါင်းစီစဥ်ထားပြီး၊ အင်္ဂလိပ်၊ မြန်မာ၊ ထိုင်းဘာသာဖြင့် အပြည့်အစုံဖော်ပြကာ  တရုတ်ဘာသာဖြင့် တစ်စိတ်တစ်ပိုင်း ဖော်ပြထားသည်။',
+      content: [
+        {
+          text: 'ထိုင်ဝမ်၏ မှန့်ကုန်း   ယဉ်ကျေးမှု အဖွဲ့	၊ မြန်မာပြည်၏ အခြေအနေအား  အစဥ်တဆိုက်အလေးထားနေသော ပြင်သစ်ဇာတ်ညွှန်းရေးဆရာ Frédéric Debomy နှင့် ဟောင်ကောင်ဒီမိုကရေစီလှုပ်ရှားမှုကို ဂရုပြုနေသော ကာတွန်းဆရာ Lau Kwong Shing（柳廣成） တို့ လက်တွဲပူပေါင်းပြီး ကာတွန်းပုံစံဖြင့် မြန်မာနိုင်ငံ၏ အာဏာသိမ်းပြီးနောက်ပိုင်းတွင် ဖြစ်ပျက်ခဲ့သော  အဖြစ်အပျက်များ၊  နိုင်ငံရေး သမိုင်းနောက်ခံ အကြောင်းအရာများကို မှတ်တမ်းတင်ရန် အတူတကွ လုပ်ဆောင်ခဲ့ကြသည်။ ',
+          highlight: false
+        },
+        {
+          text: ' ဤစာအုပ်သည် တရုတ်*၊ အင်္ဂလိပ်၊ ထိုင်း၊ နှင့် မြန်မာဘာသာစကား လေးမျိုးဖြင့် အများသူငှာ ဖတ်ရှုနိုင်ရန် ပံ့ပိုးပေးပါသည်။မြန်မာနိုင်ငံ၏ လူ့အခွင့်အရေးဆိုင်ရာအခြေအနေအရပ်ရပ်များနှင့် ဒီမိုကရေစီလှုပ်ရှားမှုများကို ကျယ်ပြန့်စွာ နားလည်ပြီး နိုင်ငံရေးကို  ပိုမိုအလေးထားလာရန် ရည်ရွယ်၍ နားလည်ရလွယ်ကူပြီး အနုပညာမြောက်သောကာတွန်းပုံ၊စာသားများ ဖြင့်ဖော်ပြထားသည်။',
+          highlight: true
+        }
+      ],
+      ps: '* တရုတ်စာလုံးသည် တစ်စိတ်တစ်ပိုင်းသာဖြစ်သည်။'
+    }
   ],
   folks: {
     script: {
@@ -35,26 +71,28 @@ export default {
       ]
     }
   },
-  readingTitle: 'Read《 Myanmar, the last stand 》',
+  readingTitle: 'အခမဲ့ဖတ်ရှုနိုင်သည်။《အဆုံးသတ်တိုက်ပွဲ》',
+  readingSubTitle: 'ဘာသာပြန်ဆိုသူ:  ရီရီ လွင်',
   reading: [
-    '#HistoryRepeating',
-    '#ATasteOfFreedom',
-    '#Uprising',
-    '#MilkTeaAlliance',
-    '#Angel',
-    '#Terrorists',
-    '#Borderlands',
-    '#Union',
-    '#SolidarityShortfall1',
-    '#SolidarityShortfall2',
-    '#Everything will be ok'
+    '#သမိုင်းကြောင်းတကျော့ပြန်',
+    '#လွတ်လပ်မှု၏အရသာတစ်စု',
+    '#တော်လှန်ကြစို့',
+    '#TheMilkTeaAlliance',
+    '#ကြယ်စင်',
+    '#အကြမ်းဖက်သမား',
+    '#နယ်စပ်ဒေသ အကြမ်းဖက်မှု',
+    '#စည်းလုံးခြင်း',
+    '#ငါတို့မှာငါတို့ပဲရှိတယ်(၁)',
+    '#ငါတို့မှာငါတို့ပဲရှိတယ်(၂)',
+    '#အားလုံးအဆင်ပြေသွားမှာပါ။',
+    '*မူရင်း'
   ],
   buy: {
-    btn_tw: 'Buy this book(Taiwan)',
-    btn_os: 'Buy this book(Oversea)',
+    btn_tw: 'စာအုပ်ဝယ်မည်။(Taiwan)',
+    btn_os: 'စာအုပ်ဝယ်မည်။(Oversea)',
     des: [
-      'To support this project, please purchase bilingual (Chinese and English) paper copies of our books, and support global delivery to help spread our literature far and wide.',
-      'For copies purchased directly from Slowork Publishing before February 28 2023, 10% of the proceeds will be donated to related organizations, such as Taiwan Alliance for Myanmar.'
+      'ဤအစီအစဥ်ကို ပံ့ပိုးကူညီရန်၊ တရုတ်နှင့် အင်္ဂလိပ်ဘာသာ နှစ်ဘာသာသုံး စာအုပ်များကို ဝယ်ယူပြီး စာအုပ်ကို ကျယ်ပြန့်စွာ ဖြန့်ချီခြင်းဖြင့်၊ ကမ္ဘာတဝှန်းလုံး ဖြန့်ဝေမှုကို ပံ့ပိုးကူညီပါ။',
+      '၂၀၂၃ခုနှစ်၊ဖေဖော်ဝါရီလ၊ 28ရက် မတိုင်မီ ဤစာအုပ်ကို မှန့်ကုန်း ယဉ်ကျေးမှု အဖွဲ့ ၌ တိုက်ရိုက်ဝယ်ယူနိုင်ပါသည်။ ဝင်ငွေ၏ 10% ကို သက်ဆိုင်ရာအဖွဲ့အစည်းများထံ လှူဒါန်းမည်ဖြစ်ပါသည်။'
     ]
   },
   footer: {

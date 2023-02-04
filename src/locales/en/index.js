@@ -84,7 +84,8 @@ export default {
     '#Union',
     '#SolidarityShortfall1',
     '#SolidarityShortfall2',
-    '#Everything will be ok'
+    '#Everything will be ok',
+    '*Source'
   ],
   buy: {
     btn_tw: 'Buy this book(Taiwan)',
