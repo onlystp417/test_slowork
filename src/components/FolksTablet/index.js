@@ -19,15 +19,24 @@ function Folks() {
   return (
     <div className="folks">
       <div className="folk">
-        <div className={`folk__header expand__header ${tab === 'script' ? 'active' : ''}`} onClick={() => setExpand('script')}>
+        <div
+          className={`folk__header expand__header ${tab === 'script' ? 'active' : ''}`}
+          onClick={() => setExpand('script')}
+        >
           <DropArrow className="drop" />
           <div className="title">{t('folks.script.name')}</div>
         </div>
-        <div className={`folk__header expand__header ${tab === 'comic' ? 'active' : ''}`} onClick={() => setExpand('comic')}>
+        <div
+          className={`folk__header expand__header ${tab === 'comic' ? 'active' : ''}`}
+          onClick={() => setExpand('comic')}
+        >
           <DropArrow className="drop" />
           <div className="title">{t('folks.comic.name')}</div>
         </div>
-        <div className={`folk__header expand__header ${tab === 'publishing' ? 'active' : ''}`} onClick={() => setExpand('publishing')}>
+        <div
+          className={`folk__header expand__header ${tab === 'publishing' ? 'active' : ''}`}
+          onClick={() => setExpand('publishing')}
+        >
           <DropArrow className="drop" />
           <div className="title">{t('folks.publishing.name')}</div>
         </div>

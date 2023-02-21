@@ -19,7 +19,10 @@ function Folks() {
   return (
     <div className="folks">
       <div className="folk">
-        <div className={`folk__header expand__header ${tab === 'script' ? 'active' : ''}`} onClick={() => onSetTab('script')}>
+        <div
+          className={`folk__header expand__header ${tab === 'script' ? 'active' : ''}`}
+          onClick={() => onSetTab('script')}
+        >
           <DropArrow className="drop" />
           <div className="title">{t('folks.script.name')}</div>
         </div>
@@ -31,7 +34,10 @@ function Folks() {
         </div>
       </div>
       <div className="folk expand">
-        <div className={`folk__header expand__header ${tab === 'comic' ? 'active' : ''}`} onClick={() => onSetTab('comic')}>
+        <div
+          className={`folk__header expand__header ${tab === 'comic' ? 'active' : ''}`}
+          onClick={() => onSetTab('comic')}
+        >
           <DropArrow className="drop" />
           <div className="title">{t('folks.comic.name')}</div>
         </div>
@@ -43,7 +49,10 @@ function Folks() {
         </div>
       </div>
       <div className="folk">
-        <div className={`folk__header expand__header ${tab === 'publishing' ? 'active' : ''}`} onClick={() => onSetTab('publishing')}>
+        <div
+          className={`folk__header expand__header ${tab === 'publishing' ? 'active' : ''}`}
+          onClick={() => onSetTab('publishing')}
+        >
           <DropArrow className="drop" />
           <div className="title">{t('folks.publishing.name')}</div>
         </div>
@@ -58,7 +67,7 @@ function Folks() {
   );
 
   function onSetTab(currTab) {
-    if(currTab === tab) setTab(null);
+    if (currTab === tab) setTab(null);
     else setTab(currTab);
   }
 }

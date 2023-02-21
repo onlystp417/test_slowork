@@ -14,8 +14,6 @@ import Campaigns from '@/components/Campaigns';
 import Podcast from '@/components/Podcast';
 import Footer from '@/components/Footer';
 
-import TempBanner from '@/components/TempBanner';
-
 import './App.sass';
 
 function App() {
@@ -47,9 +45,7 @@ function App() {
           <HeaderTablet onScrollTo={name => scrollTo(name)} />
         </div>
       </div>
-      <div>
-        {i18n.language === 'zhTW' ? <Marquee /> : ''}
-      </div>
+      <div>{i18n.language === 'zhTW' ? <Marquee /> : ''}</div>
       <Banner />
       <div className="mobile">
         <FolksMobile />
