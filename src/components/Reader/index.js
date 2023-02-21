@@ -9,6 +9,9 @@ import { pdfjs } from 'react-pdf';
 
 // resource
 import zhComic from '@/assets/comics/zhTW.pdf';
+import zhComic_1 from '@/assets/comics/zhTW_1.pdf';
+import zhComic_2 from '@/assets/comics/zhTW_2.pdf';
+import zhComic_3 from '@/assets/comics/zhTW_3.pdf';
 import enComic from '@/assets/comics/en.pdf';
 import thComic from '@/assets/comics/th.pdf';
 import buComic from '@/assets/comics/bu.pdf';
@@ -157,27 +160,67 @@ function Reader() {
     const isVisited = localStorage.getItem('isVisited');
     if (isVisited) {
       return (
-        <Document
-          options={{
-            cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
-            cMapPacked: true
-          }}
-          file={comics[localStorage.getItem('lang')]}
-          onLoadSuccess={onDocumentLoadSuccess}
-          onLoadProgress={() => setLoading(true)}
-        >
-          <Page pageNumber={limitPage()} />
-        </Document>
+        <>
+          <Document
+            options={{
+              cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+              cMapPacked: true
+            }}
+            file={zhComic_1}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+          <Document
+            options={{
+              cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+              cMapPacked: true
+            }}
+            file={zhComic_2}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+          <Document
+            options={{
+              cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+              cMapPacked: true
+            }}
+            file={zhComic_3}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+        </>
       );
     } else {
       return (
-        <Document
-          file={zhComic}
-          onLoadSuccess={onDocumentLoadSuccess}
-          onLoadProgress={() => setLoading(true)}
-        >
-          <Page pageNumber={limitPage()} />
-        </Document>
+        <>
+          <Document
+            file={zhComic_1}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+          <Document
+            file={zhComic_2}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+          <Document
+            file={zhComic_3}
+            onLoadSuccess={onDocumentLoadSuccess}
+            onLoadProgress={() => setLoading(true)}
+          >
+            <Page pageNumber={limitPage()} />
+          </Document>
+        </>
       );
     }
   }
